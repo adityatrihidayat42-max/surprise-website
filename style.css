@@ -384,25 +384,21 @@
 }
 
 
-/* ROMANTIC ENVELOPE */
-.envelope-stage{width:min(440px,100%);height:300px;display:grid;place-items:center;perspective:1100px;margin:8px auto 2px;overflow:visible}
-.envelope{position:relative;width:min(330px,82vw);height:205px;filter:drop-shadow(0 18px 24px #25001f77);transform:translateY(22px)}
-.envelope-back{position:absolute;inset:0;background:linear-gradient(145deg,#f9dce9,#d98bb5);border:1px solid #ffe6f2;border-radius:7px;z-index:1}
-.envelope-pocket{position:absolute;inset:0;background:linear-gradient(145deg,#e8a8c8,#bd5e91);clip-path:polygon(0 0,50% 58%,100% 0,100% 100%,0 100%);border-radius:7px;z-index:4}
-.envelope-flap{position:absolute;inset:0;background:linear-gradient(160deg,#ffe9f2,#e8b0ce);clip-path:polygon(0 0,100% 0,50% 62%);transform-origin:top center;transform:rotateX(0);transition:transform .85s cubic-bezier(.2,.75,.25,1);z-index:6;filter:drop-shadow(0 3px 2px #8d3c6a55)}
-.envelope-seal{position:absolute;z-index:7;left:50%;top:48%;transform:translate(-50%,-50%);width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#f7c2dc,#a83270);border:2px solid #f9d9e9;color:#fff;font-size:20px;box-shadow:0 3px 8px #68204e77;transition:opacity .25s,transform .3s}
-.love-letter{position:absolute;z-index:3;left:7%;top:8%;width:86%;height:84%;padding:12px;background:#fff8ef;color:#694258;box-shadow:0 4px 12px #4a123455;transform:translateY(0);transition:transform 1s cubic-bezier(.18,.75,.25,1) .35s,height .5s;overflow:hidden}
-.love-letter-inner{border:1px dashed #d8a2bc;height:100%;padding:14px 17px;text-align:center;font-family:"Cormorant Garamond",serif;overflow:auto}
-.love-letter .letter-kicker{font:600 8px Montserrat,sans-serif;letter-spacing:3px;color:#b65b8c;margin:0 0 7px}
-.love-letter h2{font:38px "Great Vibes",cursive;color:#a43c78;margin:0 0 6px}
-.love-letter p{font-size:15px;line-height:1.35;margin:7px 0}
-.love-letter .letter-closing{margin-top:12px;font-style:italic}
-.love-letter .letter-signature{font:27px "Great Vibes",cursive;color:#a43c78}
-.envelope.open .envelope-flap{transform:rotateX(180deg);z-index:0}
-.envelope.open .envelope-seal{opacity:0;transform:translate(-50%,-50%) scale(.5)}
-.envelope.open .love-letter{transform:translateY(-150px);height:260px;z-index:8}
-.open-envelope{border:1px solid #ffd1e7;background:linear-gradient(135deg,#f2b6d4,#a94a88);color:#fff;padding:13px 25px;border-radius:30px;letter-spacing:2px;font:600 10px Montserrat,sans-serif;box-shadow:0 8px 20px #30002466;cursor:pointer;transition:transform .25s,filter .25s}
-.open-envelope:hover{transform:translateY(-3px);filter:brightness(1.08)}
-.envelope-hint{font:italic 14px "Cormorant Garamond",serif;color:#ffe0f0;margin:13px 0 0}
-@media(max-width:650px){.envelope-stage{height:285px}.envelope{width:min(310px,84vw);height:190px}.envelope.open .love-letter{transform:translateY(-145px);height:250px}.love-letter-inner{padding:11px 13px}.love-letter p{font-size:14px}}
-@media(prefers-reduced-motion:reduce){.envelope-flap,.love-letter,.envelope-seal{transition:none}}
+
+
+/* FRONT INTRO ENVELOPE - opens into the four surprise choices */
+.intro{display:grid;place-items:center;padding:24px;background:radial-gradient(ellipse at 50% 38%,#59234f 0%,#260026 72%)}
+.intro-envelope-wrap{width:min(420px,100%);display:flex;flex-direction:column;align-items:center;text-align:center}
+.intro-envelope-kicker{font:500 10px Montserrat,sans-serif;letter-spacing:4px;color:#f4c9df;margin:0 0 36px}
+.intro-envelope{position:relative;width:min(330px,82vw);height:210px;perspective:1000px;filter:drop-shadow(0 20px 28px #09000b99);margin:0 auto 20px}
+.intro-envelope-back{position:absolute;inset:0;background:linear-gradient(145deg,#f9e2ed,#d889b2);border:1px solid #ffeaf4;border-radius:8px;z-index:1}
+.intro-envelope-front{position:absolute;inset:0;background:linear-gradient(145deg,#e9a9c9,#b9578b);clip-path:polygon(0 0,50% 58%,100% 0,100% 100%,0 100%);border-radius:8px;z-index:4}
+.intro-envelope-flap{position:absolute;inset:0;background:linear-gradient(160deg,#fff0f6,#e8b0ce);clip-path:polygon(0 0,100% 0,50% 62%);transform-origin:top center;transition:transform .85s cubic-bezier(.2,.75,.25,1);z-index:6}
+.intro-envelope-seal{position:absolute;z-index:7;left:50%;top:48%;transform:translate(-50%,-50%);width:45px;height:45px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#f7c2dc,#a83270);border:2px solid #f9d9e9;color:white;font-size:21px;transition:opacity .25s,transform .3s}
+.intro-letter{position:absolute;z-index:2;left:8%;top:8%;width:84%;height:82%;background:#fff8ef;color:#9f4778;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;transition:transform .9s ease .25s}
+.intro-letter span{font:italic 15px "Cormorant Garamond",serif}.intro-letter b{font:36px "Great Vibes",cursive}.intro-letter i{font-style:normal}
+.intro-envelope.opened .intro-envelope-flap{transform:rotateX(180deg);z-index:0}
+.intro-envelope.opened .intro-envelope-seal{opacity:0;transform:translate(-50%,-50%) scale(.4)}
+.intro-envelope.opened .intro-letter{transform:translateY(-125px);z-index:8}
+.intro-envelope-hint{font:italic 16px "Cormorant Garamond",serif;color:#f7dce9;margin:5px 0 20px}
+#skipIntro{border:1px solid #ffd1e7;background:linear-gradient(135deg,#f2b6d4,#a94a88);color:white;padding:13px 27px;border-radius:30px;letter-spacing:2px;font:600 10px Montserrat,sans-serif;box-shadow:0 8px 20px #10001066;cursor:pointer}
