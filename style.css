@@ -1178,3 +1178,51 @@
     font-size:14px !important;
   }
 }
+
+
+/* FINAL TOUCH: KEEP RADIO BESIDE TV, VINYL SPINS SLOWLY */
+@media (max-width:650px) {
+  #playlist .retro-room {
+    width:100% !important;
+    max-width:390px !important;
+    height:410px !important;
+    min-height:410px !important;
+    margin:0 auto 22px !important;
+    position:relative !important;
+    overflow:visible !important;
+  }
+  #playlist .tv {
+    left:0 !important;
+    top:12px !important;
+    width:58% !important;
+    height:220px !important;
+    z-index:1 !important;
+  }
+  #playlist .radio {
+    right:0 !important;
+    left:auto !important;
+    top:58px !important;
+    width:32% !important;
+    height:112px !important;
+    z-index:2 !important;
+  }
+  #playlist .cassette {
+    left:0 !important;
+    bottom:14px !important;
+    width:145px !important;
+    height:80px !important;
+    z-index:1 !important;
+  }
+  #playlist .record {
+    right:5% !important;
+    bottom:0 !important;
+    width:125px !important;
+    height:125px !important;
+    z-index:2 !important;
+    animation:vinylGentleTurn 30s linear infinite !important;
+    transform-origin:50% 50% !important;
+  }
+  #playlist .trackbar {
+    margin-top:0 !important;
+  }
+}
