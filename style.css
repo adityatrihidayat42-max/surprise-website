@@ -584,78 +584,29 @@
 }
 
 
-/* PLAYLIST MOTION POLISH */
-@keyframes playlistRiseIn {
-  from { opacity: 0; transform: translateY(24px) scale(.97); filter: blur(5px); }
-  to { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
-}
-@keyframes playlistSoftGlow {
-  0%,100% { box-shadow: 0 12px 25px #21001e88, 0 0 0 rgba(255,177,220,0); }
-  50% { box-shadow: 0 15px 30px #21001eaa, 0 0 24px rgba(255,177,220,.2); }
-}
-@keyframes vinylSlowSpin { to { transform: rotate(360deg); } }
-@keyframes playlistPulse {
-  0%,100% { opacity:.72; }
-  50% { opacity:1; }
-}
-#playlist.active .page-script {
-  animation: playlistRiseIn .85s cubic-bezier(.2,.75,.25,1) both;
-}
-#playlist.active > .subline {
-  animation: playlistRiseIn .85s .12s both;
-}
-#playlist.active .tv {
-  animation: playlistRiseIn .9s .22s cubic-bezier(.2,.75,.25,1) both, playlistSoftGlow 4.8s 1.2s ease-in-out infinite;
-}
-#playlist.active .radio {
-  animation: playlistRiseIn .85s .4s both;
-}
-#playlist.active .cassette {
-  animation: playlistRiseIn .85s .52s both;
-}
-#playlist.active .record {
-  animation: playlistRiseIn .9s .62s both, vinylSlowSpin 18s 1.5s linear infinite;
-}
-#playlist.active .trackbar {
-  animation: playlistRiseIn .85s .72s both;
-}
+
+
+/* ONLY THE ALBUM-COVER TO VIDEO TRANSITION */
 #playlist .tv-screen {
-  box-shadow: inset 0 0 22px rgba(255,155,213,.12);
+  position: relative !important;
+  overflow: hidden !important;
 }
 #playlist .playlist-tv-cover {
-  transition: transform .7s ease, filter .7s ease;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity .65s ease, transform .85s cubic-bezier(.2,.75,.25,1), filter .65s ease;
 }
-#playlist .tv:hover .playlist-tv-cover {
-  transform: scale(1.035);
-  filter: saturate(1.12) brightness(1.04);
-}
-#playlist .radio-window {
-  animation: playlistPulse 3s ease-in-out infinite;
-}
-#playlist .trackbar button {
-  transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
-  box-shadow: 0 5px 14px rgba(255,181,217,.14);
-}
-#playlist .trackbar button:active {
-  transform: scale(.94);
-}
-#playlist .trackbar button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(255,181,217,.3);
+#playlist .tv-screen.is-playing .playlist-tv-cover {
+  opacity: 0;
+  transform: scale(1.07);
+  filter: blur(4px);
 }
 #playlist .tv-screen iframe.tv-youtube {
-  animation: playlistRiseIn .55s ease both;
+  opacity: 0;
+  transform: scale(.94);
+  transition: opacity .65s ease, transform .75s cubic-bezier(.2,.75,.25,1);
 }
-@media (prefers-reduced-motion: reduce) {
-  #playlist.active .page-script,
-  #playlist.active > .subline,
-  #playlist.active .tv,
-  #playlist.active .radio,
-  #playlist.active .cassette,
-  #playlist.active .record,
-  #playlist.active .trackbar,
-  #playlist .radio-window,
-  #playlist .tv-screen iframe.tv-youtube {
-    animation: none !important;
-  }
+#playlist .tv-screen.is-playing iframe.tv-youtube {
+  opacity: 1;
+  transform: scale(1);
 }
