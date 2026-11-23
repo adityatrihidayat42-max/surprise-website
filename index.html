@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#260026">
+<title>Choose the Surprise</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=999">
+</head>
+<body>
+<div class="intro" id="intro">
+  <div class="intro-mark">♪</div><div class="intro-name">A little surprise</div>
+  <div class="loader"><i></i></div>
+  <button class="skip" id="skipIntro">SKIP INTRO</button>
+</div>
+
+<main id="app" class="app hidden">
+  <div class="sparkles" aria-hidden="true"></div>
+  <header class="topline"><span>A SPECIAL DAY, MADE FOR YOU</span></header>
+
+  <section id="home" class="screen active">
+    <div class="home-title">Choose the Surprise</div>
+    <p class="subline">A little collection of moments, memories & love</p>
+    <div class="choices">
+      <button class="choice" data-go="journey">
+        <span class="icon-art camera-art"><svg viewBox="0 0 120 90"><path d="M14 27h22l8-12h31l8 12h23a7 7 0 0 1 7 7v42a7 7 0 0 1-7 7H14a7 7 0 0 1-7-7V34a7 7 0 0 1 7-7Z" fill="#f4d9df" stroke="#51213d" stroke-width="3"/><circle cx="60" cy="53" r="23" fill="#c17b9c" stroke="#51213d" stroke-width="4"/><circle cx="60" cy="53" r="14" fill="#35213b"/><circle cx="65" cy="47" r="5" fill="#f8dce9"/><rect x="87" y="35" width="12" height="8" rx="2" fill="#b14f83"/></svg></span>
+        <span class="choice-label">Journey</span>
+      </button>
+      <button class="choice" data-go="moments">
+        <span class="icon-art clock-art"><svg viewBox="0 0 100 100"><circle cx="50" cy="51" r="37" fill="#f4dce8" stroke="#54213e" stroke-width="4"/><circle cx="50" cy="51" r="29" fill="#f8edf1" stroke="#bd789c" stroke-width="2"/><path d="M50 29v23l17 11" fill="none" stroke="#54213e" stroke-width="4" stroke-linecap="round"/><path d="M35 8h30M50 8v7" stroke="#54213e" stroke-width="5" stroke-linecap="round"/><path d="M20 22l-7-7M80 22l7-7" stroke="#54213e" stroke-width="4" stroke-linecap="round"/></svg></span>
+        <span class="choice-label">Moments</span>
+      </button>
+      <button class="choice" data-go="playlist">
+        <span class="icon-art vinyl-art"><svg viewBox="0 0 110 100"><circle cx="55" cy="50" r="42" fill="#211728" stroke="#d9a3c2" stroke-width="3"/><circle cx="55" cy="50" r="33" fill="none" stroke="#75516e" stroke-width="2"/><circle cx="55" cy="50" r="24" fill="none" stroke="#75516e" stroke-width="2"/><circle cx="55" cy="50" r="14" fill="#d78db5"/><circle cx="55" cy="50" r="4" fill="#381d37"/><path d="M83 14l8-8 8 8-8 8Z" fill="#f4d8e7"/></svg></span>
+        <span class="choice-label">Playlist</span>
+      </button>
+      <button class="choice" data-go="gift">
+        <span class="icon-art gift-art"><svg viewBox="0 0 110 100"><path d="M17 43h76v48H17z" fill="#c85b91" stroke="#54213e" stroke-width="3"/><path d="M12 31h86v17H12z" fill="#f4d5e3" stroke="#54213e" stroke-width="3"/><path d="M50 31C18 29 24 3 43 12c9 4 10 19 12 19Zm10 0c32-2 26-28 7-19-9 4-10 19-12 19Z" fill="#eaa8c8" stroke="#54213e" stroke-width="3"/><path d="M53 31v60" stroke="#f6d9e8" stroke-width="7"/></svg></span>
+        <span class="choice-label">Gift</span>
+      </button>
+    </div>
+    <div class="home-footer">made with  just for you</div>
+  </section>
+
+  <section id="journey" class="screen">
+    <button class="back">BACK</button>
+    <h1 class="page-script">Our Journey</h1>
+    <div class="journey-scene">
+      
+      <article class="letter">
+        <div class="letter-tape"></div>
+        <div class="letter-heading">Dear You,</div>
+        <p>Some people make ordinary days feel a little more magical. This little page is a collection of happy memories, warm wishes, and all the beautiful moments worth keeping.</p>
+        <p>May your days be filled with laughter, lovely surprises, and reasons to smile. Keep shining in your own beautiful way.</p>
+        <div class="letter-sign">With love</div>
+      </article>
+      <figure class="polaroid hero-photo"><img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?w=700&q=85" alt="Friends enjoying a happy moment"><figcaption>little moments</figcaption></figure>
+      <figure class="polaroid small-photo"><img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=500&q=85" alt="Pink flowers"><figcaption>beautiful days</figcaption></figure>
+    </div>
+    <div class="mini-audio"><span class="audio-dot"></span><span>OUR LITTLE SOUNDTRACK</span><button id="playMini">▶</button></div>
+  </section>
+
+  <section id="moments" class="screen">
+    <button class="back">BACK</button>
+    <h1 class="page-script">Our Moments</h1>
+    <p class="subline">memories that feel like sunshine</p>
+    <div class="memory-wall">
+      <figure class="polaroid p1"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=500&q=85" alt="Friends together"><figcaption>the good times</figcaption></figure>
+      <figure class="polaroid p2"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=500&q=85" alt="Celebration"><figcaption>one lovely day</figcaption></figure>
+      <figure class="polaroid p3"><img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?w=500&q=85" alt="Happy moment"><figcaption>so much joy</figcaption></figure>
+      <figure class="polaroid p4"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=500&q=85" alt="Portrait"><figcaption>just because</figcaption></figure>
+      <figure class="polaroid p5"><img src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=500&q=85" alt="Flowers"><figcaption>in bloom</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="playlist" class="screen">
+    <button class="back">BACK</button>
+    <h1 class="page-script">Our Playlist</h1>
+    <p class="subline">songs for the sweetest memories</p>
+    <div class="retro-room">
+      <div class="tv">
+        <div class="tv-top">NOW PLAYING</div><div class="tv-screen"><div class="equalizer"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><strong>GOOD<br>VIBRATIONS</strong></div>
+        <div class="tv-controls"><span></span><span></span><span></span></div>
+      </div>
+      <div class="radio"><div class="radio-brand">LOVE FM</div><div class="radio-window">98.8 FM</div><div class="radio-knobs"><i></i><i></i><i></i></div></div>
+      <div class="record"><div class="record-label"></div></div>
+      <div class="cassette"><span>LOVE MIX</span><i></i><i></i></div>
+    </div>
+    <div class="trackbar"><div><b>01.</b> A song for you <small>special memories</small></div><button id="playMain">▶ PLAY</button></div>
+  </section>
+
+  <section id="gift" class="screen">
+    <button class="back">BACK</button>
+    <h1 class="page-script">A Little Gift</h1>
+    <p class="subline">something special is waiting for you</p>
+    <button class="big-gift" id="openGift"><span class="gift-illustration">✧</span><span>OPEN YOUR GIFT</span></button>
+    <div class="gift-note" id="giftNote"><div class="gift-note-inner"><h2>For You</h2><p>Wishing you endless happiness, beautiful adventures, and all the little things that make your heart smile.</p><span>with love</span></div></div>
+  </section>
+  <audio id="song" preload="none" loop></audio>
+</main>
+<script src="script.js?v=999"></script>
+
+</body>
+</html>

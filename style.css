@@ -1,0 +1,384 @@
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Montserrat,Arial,sans-serif;color:#fff}body{background:#22001f}.hidden{display:none!important}
+.intro{position:fixed;inset:0;z-index:20;background:#090a10;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;transition:opacity .8s}.intro-mark{font-size:52px;color:#fff}.intro-name{font-size:13px;letter-spacing:3px}.loader{width:145px;height:5px;border:1px solid #ddd;border-radius:10px;overflow:hidden;margin-top:10px}.loader i{display:block;width:0;height:100%;background:#fff;animation:load 2s forwards}.skip{position:absolute;bottom:35px;background:none;border:1px solid #888;color:#ddd;border-radius:20px;padding:8px 18px;font-size:9px;letter-spacing:2px}@keyframes load{to{width:100%}}
+.app{min-height:100vh;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 45%,#fa00a8 0%,#bd007e 42%,#4d064d 76%,#210025 100%);padding:24px 5vw 30px}.app:before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 20%,#ffffff0a 50%,transparent 80%)}.topline{position:absolute;top:18px;left:0;right:0;display:flex;justify-content:center;gap:15px;align-items:center;font-size:8px;letter-spacing:3px;color:#f9d8ed;opacity:.8}.tiny-heart{color:#ffb8df;font-size:12px}.screen{display:none;min-height:calc(100vh - 54px);position:relative;z-index:1;flex-direction:column;align-items:center;justify-content:center;padding:35px 0 20px;animation:screenIn .65s ease}.screen.active{display:flex}@keyframes screenIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.home-title,.page-script{font-family:"Great Vibes",cursive;font-weight:400;text-align:center;text-shadow:0 3px 12px #4b003c88}.home-title{font-size:clamp(48px,8vw,88px);margin:12px 0 2px}.subline{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:clamp(13px,2vw,19px);letter-spacing:1px;color:#ffe2f2;margin:4px 0 28px;text-align:center}.choices{width:min(880px,100%);display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,4vw,55px);align-items:center;margin:35px auto 0}.choice{background:none;border:0;color:#fff;display:flex;flex-direction:column;align-items:center;gap:14px;cursor:pointer;min-width:0}.icon-art{width:clamp(82px,13vw,142px);height:clamp(82px,13vw,142px);display:grid;place-items:center;filter:drop-shadow(0 8px 12px #33002788);transition:transform .35s,filter .35s}.icon-art svg{width:100%;height:100%;overflow:visible}.choice:hover .icon-art{transform:translateY(-10px) scale(1.08);filter:drop-shadow(0 12px 18px #ffb4e8)}.choice-label{font-family:"Great Vibes",cursive;font-size:clamp(25px,3vw,37px);text-shadow:0 2px 8px #43002f}.home-footer{margin-top:65px;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:14px;letter-spacing:2px;color:#ffd8ef}.home-footer span{color:#fff}
+.page-script{font-size:clamp(48px,7vw,78px);margin:0 0 5px}.back{position:absolute;right:3px;top:8px;border:1px solid #29152c;background:#7bf04d;color:#172216;padding:8px 23px;border-radius:3px;font-weight:600;font-size:10px;letter-spacing:2px;cursor:pointer;box-shadow:0 3px 0 #23511d}
+.journey-scene{position:relative;width:min(920px,100%);height:440px;margin:8px auto 0}.letter{position:absolute;left:8%;top:8%;width:43%;min-height:300px;background:#fff5e9;color:#5b3448;padding:34px 32px 25px;transform:rotate(-3deg);box-shadow:0 12px 25px #31002688;background-image:repeating-linear-gradient(transparent 0,transparent 29px,#dfc8c5 30px);font-family:"Cormorant Garamond",serif;font-size:18px;line-height:1.45}.letter-heading{font-family:"Great Vibes",cursive;font-size:34px;color:#a33b75;margin-bottom:8px}.letter p{margin:8px 0}.letter-sign{text-align:right;font-family:"Great Vibes",cursive;font-size:27px;color:#a33b75}.letter-tape{position:absolute;width:85px;height:22px;background:#eeb8d0aa;top:-10px;left:42%;transform:rotate(5deg)}.polaroid{position:absolute;background:#fff8f1;color:#68435b;padding:9px 9px 28px;box-shadow:0 10px 22px #28001e88;text-align:center;font-family:"Cormorant Garamond",serif;font-style:italic}.polaroid img{display:block;width:100%;height:100%;object-fit:cover}.polaroid figcaption{position:absolute;bottom:5px;left:4px;right:4px;font-size:15px}.hero-photo{right:14%;top:7%;width:230px;height:300px;transform:rotate(5deg)}.small-photo{right:0;bottom:0;width:155px;height:190px;transform:rotate(-8deg)}.rose{position:absolute;color:#ffb2d4;text-shadow:0 0 15px #ff9ad4;font-size:85px}.rose-one{left:0;bottom:0;transform:rotate(-20deg)}.rose-two{right:35%;top:0;font-size:54px}.mini-audio{display:flex;align-items:center;gap:14px;background:#2b092b99;border:1px solid #ffc1e566;padding:9px 16px;border-radius:30px;font-size:9px;letter-spacing:2px}.audio-dot{width:8px;height:8px;border-radius:50%;background:#7df65b;box-shadow:0 0 8px #7df65b}.mini-audio button,.trackbar button{border:0;border-radius:20px;background:#ffb5d9;color:#4b1740;padding:8px 16px;cursor:pointer}
+.memory-wall{position:relative;width:min(850px,100%);height:390px;margin:0 auto}.memory-wall .polaroid{width:170px;height:205px}.memory-wall .p1{left:8%;top:50px;transform:rotate(-12deg)}.memory-wall .p2{left:29%;top:10px;transform:rotate(7deg)}.memory-wall .p3{left:49%;top:65px;transform:rotate(-5deg)}.memory-wall .p4{right:7%;top:8px;transform:rotate(10deg)}.memory-wall .p5{left:39%;bottom:-4px;width:145px;height:170px;transform:rotate(9deg)}
+.retro-room{width:min(750px,100%);height:340px;position:relative;margin:5px auto}.tv{position:absolute;left:12%;top:10px;width:44%;height:245px;background:linear-gradient(145deg,#332536,#17111d);border:12px solid #4b3548;border-radius:24px;box-shadow:0 15px 25px #21001e99;padding:13px}.tv-top{font-size:9px;letter-spacing:3px;text-align:center;color:#f7cce3}.tv-screen{height:170px;background:radial-gradient(#ed48b3,#65004f);border:5px solid #110e16;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:8px;text-align:center;text-shadow:0 0 9px #fff}.tv-screen strong{font-family:"Cormorant Garamond",serif;letter-spacing:5px;font-size:20px}.equalizer{display:flex;align-items:end;gap:5px;height:45px}.equalizer i{display:block;width:6px;background:#ffe1f4;border-radius:5px;animation:eq .7s infinite alternate}.equalizer i:nth-child(odd){height:35px}.equalizer i:nth-child(even){height:18px;animation-delay:.3s}@keyframes eq{to{height:9px}}.tv-controls{display:flex;justify-content:center;gap:15px;padding-top:8px}.tv-controls span{width:10px;height:10px;border-radius:50%;background:#b98aa8}.radio{position:absolute;right:8%;top:55px;width:230px;height:135px;background:linear-gradient(#f4c9df,#b96c9b);border:8px solid #4b2945;border-radius:12px;box-shadow:0 12px 20px #22001e88;padding:12px;color:#4b2342}.radio-brand{font-family:Georgia,serif;font-size:13px;letter-spacing:3px}.radio-window{margin:10px 0;background:#382238;color:#ffb8dc;padding:8px;text-align:center;font-family:Georgia,serif;letter-spacing:4px}.radio-knobs{display:flex;gap:10px;justify-content:center}.radio-knobs i{width:14px;height:14px;background:#5c3655;border-radius:50%}.record{position:absolute;right:14%;bottom:0;width:150px;height:150px;border-radius:50%;background:repeating-radial-gradient(circle,#201824 0 4px,#493348 5px 6px);border:3px solid #d7a2c4;box-shadow:0 10px 20px #22001e88;display:grid;place-items:center}.record-label{width:45px;height:45px;border-radius:50%;background:#e9a6c9;color:#6d2455;display:grid;place-items:center;font-size:20px}.cassette{position:absolute;left:7%;bottom:0;width:175px;height:92px;background:#e9b8d2;border:6px solid #4d2946;border-radius:8px;color:#59264b;text-align:center;padding:10px;font-family:Georgia,serif;letter-spacing:3px;box-shadow:0 10px 20px #22001e88}.cassette i{display:inline-block;width:27px;height:27px;border:4px solid #633a5a;border-radius:50%;margin:7px 12px 0}.trackbar{display:flex;align-items:center;justify-content:space-between;width:min(540px,100%);background:#31082eaa;border:1px solid #ffc4e555;border-radius:8px;padding:12px 17px;font-size:12px}.trackbar b{color:#ffc5e1;margin-right:8px}.trackbar small{display:block;color:#e8b9d5;margin:4px 0 0 28px;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:13px}
+.big-gift{margin-top:25px;border:1px solid #ffd1e7;background:linear-gradient(135deg,#e7a2c8,#8e397b);width:190px;height:150px;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;box-shadow:0 15px 30px #29002288;cursor:pointer;transition:.4s}.big-gift:hover{transform:translateY(-8px) rotate(-2deg)}.gift-illustration{font-family:Georgia,serif;font-size:65px}.big-gift span:last-child{font-size:9px;letter-spacing:2px}.gift-note{display:none;margin-top:22px;width:min(380px,90%);background:#fff4e9;color:#63334e;padding:12px;box-shadow:0 10px 25px #28001f88}.gift-note.show{display:block;animation:screenIn .5s}.gift-note-inner{border:1px dashed #c17a9e;padding:22px;text-align:center;font-family:"Cormorant Garamond",serif}.gift-note h2{font-family:"Great Vibes",cursive;font-size:38px;margin:0;color:#a43c78}.gift-note p{line-height:1.6}.gift-note span{font-style:italic}
+@media(max-width:650px){.app{padding:20px 16px}.screen{min-height:calc(100svh - 40px);padding-top:50px}.topline{font-size:6px;letter-spacing:2px}.home-title{font-size:51px}.subline{font-size:13px;margin-bottom:20px}.choices{grid-template-columns:repeat(2,1fr);gap:26px 15px;margin-top:12px;max-width:390px}.icon-art{width:105px;height:100px}.choice-label{font-size:29px}.home-footer{margin-top:35px}.journey-scene{height:570px;max-width:390px}.letter{left:2%;top:15px;width:75%;min-height:280px;padding:25px 20px;font-size:16px}.hero-photo{right:3%;top:300px;width:165px;height:205px}.small-photo{right:auto;left:5%;bottom:0;width:130px;height:155px}.rose-one{font-size:55px;left:auto;right:0;bottom:0}.rose-two{right:4%;top:245px;font-size:45px}.memory-wall{height:490px;max-width:390px}.memory-wall .polaroid{width:135px;height:160px;padding:7px 7px 23px}.memory-wall .p1{left:1%;top:35px}.memory-wall .p2{left:auto;right:1%;top:10px}.memory-wall .p3{left:4%;top:220px}.memory-wall .p4{right:2%;top:205px}.memory-wall .p5{left:34%;bottom:0;width:120px;height:145px}.retro-room{height:390px;max-width:390px}.tv{left:0;top:10px;width:65%;height:220px;border-width:9px;padding:9px}.tv-screen{height:150px}.tv-screen strong{font-size:15px}.radio{right:0;top:55px;width:145px;height:112px;border-width:6px;padding:7px}.radio-brand{font-size:10px}.radio-window{margin:7px 0;padding:5px;font-size:12px}.radio-knobs{gap:6px}.radio-knobs i{width:10px;height:10px}.record{right:5%;bottom:0;width:125px;height:125px}.cassette{left:0;bottom:12px;width:145px;height:80px;font-size:12px}.cassette i{width:22px;height:22px;margin:5px 8px}.trackbar{font-size:10px}.back{top:5px;right:0}.page-script{font-size:52px}.intro-name{font-size:11px}}
+@media(min-width:651px) and (max-height:650px){.screen{min-height:600px}.journey-scene{height:350px}.letter{min-height:250px}.hero-photo{height:250px}.small-photo{height:150px}.retro-room{height:300px}.tv{height:220px}.tv-screen{height:145px}}
+
+.youtube-player {
+  width: min(540px, 100%);
+  aspect-ratio: 16 / 9;
+  margin: 18px auto;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #160818;
+  box-shadow: 0 12px 30px #16001888;
+}
+
+.youtube-player iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+@media(max-width:650px) {
+  .trackbar {
+    width: 100%;
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .trackbar button {
+    white-space: nowrap;
+  }
+
+  .youtube-player {
+    width: 100%;
+  }
+
+  .screen {
+    overflow: visible;
+  }
+
+  .back {
+    z-index: 5;
+  }
+}
+
+
+/* VIDEO DI DALAM LAYAR TV */
+.tv-screen {
+  position: relative;
+  overflow: hidden;
+}
+
+.tv-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: #100b16;
+}
+
+.tv-video iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.record-label {
+  font-size: 0;
+}
+
+/* FIX RESPONSIVE TV PLAYER */
+.tv {
+  box-sizing: border-box;
+  overflow: hidden;
+  min-width: 0;
+}
+
+.tv-screen {
+  position: relative !important;
+  display: block !important;
+  width: 100% !important;
+  height: 170px !important;
+  min-width: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+}
+
+.tv-video {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+  background: #100b16;
+}
+
+.tv-video iframe {
+  position: absolute !important;
+  inset: 0 !important;
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100% !important;
+  border: 0 !important;
+}
+
+.record-label::after {
+  content: "";
+  width: 9px;
+  height: 9px;
+  background: #542747;
+  border-radius: 50%;
+}
+
+@media (max-width: 650px) {
+  .tv-screen {
+    height: 150px !important;
+  }
+
+  .tv-video,
+  .tv-video iframe {
+    max-width: 100% !important;
+  }
+
+  .retro-room {
+    overflow: hidden;
+  }
+}
+
+/* FINAL FIX - RETRO TV */
+.tv,
+.radio,
+.tv-screen,
+.tv-video,
+.tv-video iframe {
+  box-sizing: border-box !important;
+}
+
+.tv {
+  width: 44% !important;
+  height: 245px !important;
+  overflow: hidden !important;
+}
+
+.tv-screen {
+  display: block !important;
+  position: relative !important;
+  width: 100% !important;
+  height: 170px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  background: #100b16 !important;
+  border: 5px solid #110e16 !important;
+  text-shadow: none !important;
+}
+
+.tv-video {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+}
+
+.tv-video iframe {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  border: 0 !important;
+}
+
+.radio {
+  width: 230px !important;
+}
+
+@media (max-width: 650px) {
+  .retro-room {
+    width: 100% !important;
+    max-width: 390px !important;
+    overflow: hidden !important;
+  }
+
+  .tv {
+    left: 0 !important;
+    width: 62% !important;
+    height: 220px !important;
+  }
+
+  .tv-screen {
+    height: 150px !important;
+  }
+
+  .radio {
+    right: 0 !important;
+    width: 36% !important;
+    height: 112px !important;
+  }
+}
+
+/* FINAL FIX - RETRO TV */
+.tv,
+.radio,
+.tv-screen,
+.tv-video,
+.tv-video iframe {
+  box-sizing: border-box !important;
+}
+
+.tv {
+  width: 44% !important;
+  height: 245px !important;
+  overflow: hidden !important;
+}
+
+.tv-screen {
+  display: block !important;
+  position: relative !important;
+  width: 100% !important;
+  height: 170px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  background: #100b16 !important;
+  border: 5px solid #110e16 !important;
+  text-shadow: none !important;
+}
+
+.tv-video {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: hidden !important;
+}
+
+.tv-video iframe {
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  border: 0 !important;
+}
+
+.radio {
+  width: 230px !important;
+}
+
+@media (max-width: 650px) {
+  .retro-room {
+    width: 100% !important;
+    max-width: 390px !important;
+    overflow: hidden !important;
+  }
+
+  .tv {
+    left: 0 !important;
+    width: 62% !important;
+    height: 220px !important;
+  }
+
+  .tv-screen {
+    height: 150px !important;
+  }
+
+  .radio {
+    right: 0 !important;
+    width: 36% !important;
+    height: 112px !important;
+  }
+}
+
+
+/* FINAL TV SCREEN PLAYER - MOBILE */
+#playlist .tv {
+  position: absolute !important;
+  overflow: hidden !important;
+}
+
+#playlist .tv-screen {
+  position: relative !important;
+  display: block !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  padding: 0 !important;
+  width: 100% !important;
+  height: 150px !important;
+  min-width: 0 !important;
+  background: #100b16 !important;
+}
+
+#playlist .tv-screen iframe.tv-youtube {
+  position: absolute !important;
+  display: block !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  border: 0 !important;
+  margin: 0 !important;
+}
+
+@media (min-width: 651px) {
+  #playlist .tv-screen {
+    height: 170px !important;
+  }
+}
+
+
+/* STRICT TV VIDEO CONTAINMENT */
+#playlist .retro-room .tv {
+  overflow: hidden !important;
+}
+
+#playlist .retro-room .tv .tv-screen {
+  position: relative !important;
+  width: 100% !important;
+  height: 150px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  display: block !important;
+}
+
+#playlist .retro-room .tv .tv-screen iframe.tv-youtube {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+
+@media (min-width: 651px) {
+  #playlist .retro-room .tv .tv-screen {
+    height: 170px !important;
+  }
+}
+
+
+/* ELEGANT DECORATION - NO EMOJI */
+.tiny-heart,
+.home-footer span {
+  display: none !important;
+}
+
+.rose {
+  display: none !important;
+}
+
+.audio-dot {
+  background: #e9a6c9 !important;
+  box-shadow: 0 0 9px #e9a6c9 !important;
+}
+
+.record-label {
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.record-label::after {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #542747;
+}
+
+.letter-sign {
+  letter-spacing: 1px;
+}
