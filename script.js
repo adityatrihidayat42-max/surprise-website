@@ -65,9 +65,9 @@ document.getElementById("playMain")?.addEventListener("click", () => {
   const player = document.createElement("iframe");
   player.className = "tv-youtube";
   player.src = "https://www.youtube-nocookie.com/embed/UppBA4u9pyQ?autoplay=1&start=120&end=191&playsinline=1&rel=0";
-  player.title = "LANY - you! (official lyric video), selected section";
-  player.allow = "autoplay; encrypted-media; picture-in-picture";
-  player.allowFullscreen = true;
+  player.title = "LANY - you!";
+  player.allow = "autoplay; encrypted-media";
+  player.setAttribute("aria-hidden", "true");
   screen.appendChild(player);
   requestAnimationFrame(() => screen.classList.add("is-playing"));
   button.textContent = "■ STOP";
