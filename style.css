@@ -728,3 +728,143 @@
 @media (prefers-reduced-motion: reduce) {
   #playlist .record {animation:none !important}
 }
+
+
+/* FINAL MOBILE PLAYLIST FIT — KEEP EVERY RETRO OBJECT IN FRAME */
+@media (max-width:650px) {
+  body:has(#playlist.active) {
+    height:100svh !important;
+    overflow:hidden !important;
+    overscroll-behavior:none !important;
+  }
+  body:has(#playlist.active) .app {
+    height:100svh !important;
+    min-height:100svh !important;
+    overflow:hidden !important;
+    padding:10px 16px 8px !important;
+  }
+  body:has(#playlist.active) #playlist.screen,
+  body:has(#playlist.active) #playlist.screen.active {
+    display:flex !important;
+    height:100% !important;
+    min-height:0 !important;
+    max-height:100% !important;
+    overflow:hidden !important;
+    box-sizing:border-box !important;
+    padding:42px 0 8px !important;
+    justify-content:flex-start !important;
+    align-items:center !important;
+    gap:0 !important;
+  }
+  #playlist .back {
+    top:2px !important;
+    right:0 !important;
+  }
+  #playlist .page-script {
+    flex:0 0 auto !important;
+    font-size:clamp(43px,11vw,52px) !important;
+    line-height:1.05 !important;
+    margin:0 0 3px !important;
+  }
+  #playlist .subline {
+    flex:0 0 auto !important;
+    font-size:12px !important;
+    line-height:1.2 !important;
+    margin:0 0 12px !important;
+  }
+  #playlist .retro-room {
+    position:relative !important;
+    display:block !important;
+    flex:0 0 auto !important;
+    width:100% !important;
+    height:clamp(260px,39svh,300px) !important;
+    max-width:390px !important;
+    min-height:0 !important;
+    margin:0 auto 10px !important;
+    overflow:visible !important;
+  }
+  #playlist .tv {
+    left:0 !important;
+    top:4px !important;
+    width:63% !important;
+    height:184px !important;
+    border-width:8px !important;
+    padding:8px !important;
+  }
+  #playlist .tv-top {
+    height:24px !important;
+    line-height:18px !important;
+  }
+  #playlist .tv-screen {
+    height:120px !important;
+    min-height:0 !important;
+  }
+  #playlist .tv-controls {
+    padding-top:6px !important;
+    gap:12px !important;
+  }
+  #playlist .radio {
+    right:0 !important;
+    top:26px !important;
+    width:34% !important;
+    height:105px !important;
+    padding:6px !important;
+    border-width:6px !important;
+  }
+  #playlist .radio-brand {
+    font-size:9px !important;
+    letter-spacing:2px !important;
+  }
+  #playlist .radio-window {
+    margin:6px 0 !important;
+    padding:5px !important;
+    font-size:11px !important;
+  }
+  #playlist .radio-knobs {gap:5px !important}
+  #playlist .radio-knobs i {width:9px !important;height:9px !important}
+  #playlist .cassette {
+    left:0 !important;
+    bottom:4px !important;
+    width:45% !important;
+    height:68px !important;
+    padding:6px !important;
+    font-size:10px !important;
+  }
+  #playlist .cassette i {
+    width:17px !important;
+    height:17px !important;
+    border-width:3px !important;
+    margin:4px 6px 0 !important;
+  }
+  #playlist .record {
+    right:4% !important;
+    bottom:0 !important;
+    width:clamp(94px,28vw,112px) !important;
+    height:clamp(94px,28vw,112px) !important;
+  }
+  #playlist .record-label {width:36% !important;height:36% !important}
+  #playlist .trackbar {
+    flex:0 0 auto !important;
+    width:100% !important;
+    max-width:540px !important;
+    margin:0 auto !important;
+    padding:10px 12px !important;
+    min-height:64px !important;
+  }
+  #playlist .trackbar button {
+    min-width:105px !important;
+    padding:9px 12px !important;
+  }
+}
+@media (max-width:650px) and (max-height:700px) {
+  body:has(#playlist.active) #playlist.screen {padding-top:36px !important}
+  #playlist .page-script {font-size:42px !important}
+  #playlist .subline {margin-bottom:7px !important}
+  #playlist .retro-room {height:245px !important;margin-bottom:5px !important}
+  #playlist .tv {height:170px !important}
+  #playlist .tv-screen {height:106px !important}
+  #playlist .radio {top:20px !important;height:98px !important}
+  #playlist .cassette {height:60px !important}
+  #playlist .record {width:90px !important;height:90px !important}
+  #playlist .trackbar {min-height:58px !important}
+}
