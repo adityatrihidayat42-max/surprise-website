@@ -3,18 +3,23 @@ const app = document.getElementById("app");
 
 function startSite() {
   if (!intro || !app || intro.classList.contains("hidden")) return;
-
-  intro.style.opacity = "0";
-
+  const introEnvelope = document.getElementById("introEnvelope");
+  const introHint = document.getElementById("introEnvelopeHint");
+  const openButton = document.getElementById("skipIntro");
+  if (introEnvelope?.classList.contains("opened")) return;
+  introEnvelope?.classList.add("opened");
+  if (introHint) introHint.textContent = "your surprise is waiting...";
+  if (openButton) openButton.textContent = "WELCOME";
   setTimeout(() => {
-    intro.classList.add("hidden");
-    app.classList.remove("hidden");
-  }, 650);
+    intro.style.opacity = "0";
+    setTimeout(() => {
+      intro.classList.add("hidden");
+      app.classList.remove("hidden");
+    }, 650);
+  }, 1050);
 }
 
 document.getElementById("skipIntro")?.addEventListener("click", startSite);
-
-setTimeout(startSite, 2500);
 
 const screens = [...document.querySelectorAll(".screen")];
 
