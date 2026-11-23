@@ -570,3 +570,15 @@
   #playlist .album-card{width:min(300px,78vw);margin:8px auto 22px}
   #playlist .trackbar{width:100%;padding:12px}
 }
+
+/* RESTORE ORIGINAL RETRO PLAYLIST LAYOUT; ALBUM ART IN THE TV */
+#playlist .album-card,
+#playlist .lyrics-card,
+#playlist .youtube-player{display:none!important}
+#playlist .retro-room{display:block!important;position:relative!important}
+#playlist .tv-screen{position:relative!important;overflow:hidden!important}
+#playlist .playlist-tv-cover{
+ display:block!important;width:100%!important;height:100%!important;
+ object-fit:cover!important;object-position:center!important;
+ border:0!important;margin:0!important;
+}
