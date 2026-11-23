@@ -50,25 +50,7 @@ document.getElementById("playMini")?.addEventListener("click", () => {
 
 
 document.getElementById("playMain")?.addEventListener("click", () => {
-  const player = document.getElementById("youtubeAudio");
-  const button = document.getElementById("playMain");
-  if (!player || !button) return;
-
-  if (!player.classList.contains("is-visible")) {
-    player.innerHTML = `<iframe
-      src="https://www.youtube-nocookie.com/embed/UppBA4u9pyQ?autoplay=1&rel=0&playsinline=1"
-      title="LANY - you! (official lyric video)"
-      allow="autoplay; encrypted-media; picture-in-picture; web-share"
-      allowfullscreen>
-    </iframe>`;
-    player.classList.add("is-visible");
-    button.textContent = "TUTUP PLAYER";
-    player.scrollIntoView({ behavior: "smooth", block: "center" });
-  } else {
-    player.innerHTML = "";
-    player.classList.remove("is-visible");
-    button.textContent = "▶ PUTAR LAGU";
-  }
+  window.open("https://www.youtube.com/watch?v=UppBA4u9pyQ", "_blank", "noopener");
 });
 
 const sparkle = document.querySelector(".sparkles");
