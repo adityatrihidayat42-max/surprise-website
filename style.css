@@ -402,3 +402,71 @@
 .intro-envelope.opened .intro-letter{transform:translateY(-125px);z-index:8}
 .intro-envelope-hint{font:italic 16px "Cormorant Garamond",serif;color:#f7dce9;margin:5px 0 20px}
 #skipIntro{border:1px solid #ffd1e7;background:linear-gradient(135deg,#f2b6d4,#a94a88);color:white;padding:13px 27px;border-radius:30px;letter-spacing:2px;font:600 10px Montserrat,sans-serif;box-shadow:0 8px 20px #10001066;cursor:pointer}
+
+
+/* REFINED ENVELOPE INTRO — EDITORIAL, LUXURIOUS, NO EMOJI */
+.intro{
+  background:
+    radial-gradient(ellipse at 50% 42%,rgba(157,74,126,.38),transparent 48%),
+    radial-gradient(ellipse at 50% 100%,#130016 0%,transparent 60%),
+    linear-gradient(145deg,#17051d 0%,#32102f 48%,#19051e 100%);
+}
+.intro:before,.intro:after{
+  content:"";position:absolute;pointer-events:none;inset:18px;
+  border:1px solid rgba(244,202,224,.17);border-radius:3px;
+}
+.intro:after{inset:25px;border-color:rgba(244,202,224,.07)}
+.intro-envelope-wrap{position:relative;z-index:1;width:min(430px,100%)}
+.intro-envelope-kicker{font-size:9px;letter-spacing:5px;color:#f6d8e8;margin-bottom:42px;text-shadow:0 2px 14px #f2a4cf44}
+.intro-envelope{
+  width:min(340px,84vw);height:225px;margin-bottom:28px;
+  filter:drop-shadow(0 24px 32px rgba(0,0,0,.42));
+}
+.intro-envelope-back{
+  background:linear-gradient(145deg,#fcebf2 0%,#e7b4ce 42%,#c878a5 100%);
+  border:1px solid rgba(255,255,255,.75);border-radius:5px;
+}
+.intro-envelope-back:after{
+  content:"";position:absolute;inset:9px;border:1px solid rgba(143,57,103,.22);border-radius:2px;
+}
+.intro-envelope-front{
+  background:linear-gradient(145deg,#eab6d0 0%,#c875a5 55%,#a94f83 100%);
+  filter:drop-shadow(0 -2px 2px rgba(255,255,255,.22));
+}
+.intro-envelope-flap{
+  background:linear-gradient(160deg,#fff8fb 0%,#f2d4e3 55%,#dfa5c4 100%);
+  backface-visibility:visible;
+}
+.intro-envelope-seal{
+  width:64px;height:64px;border-radius:50%;
+  background:radial-gradient(circle at 32% 25%,#f9e2ed,#c878a5 68%,#8e3b70);
+  border:1px solid #fff0f7;outline:1px solid rgba(255,235,246,.48);outline-offset:4px;
+  color:#fff8fb;font:500 8px Montserrat,sans-serif;letter-spacing:1.2px;
+  box-shadow:0 5px 16px #5c1a4655;
+}
+.intro-letter{
+  background:linear-gradient(145deg,#fffdfb,#f8e9ed);
+  box-shadow:inset 0 0 0 1px #dcb8c8, inset 0 0 0 7px #fffdfb;
+  color:#984b76;
+}
+.intro-letter span{font:500 8px Montserrat,sans-serif;letter-spacing:3px}
+.intro-letter b{font:42px "Great Vibes",cursive}
+.intro-letter i{font:500 7px Montserrat,sans-serif;letter-spacing:2px;color:#b17b98}
+.intro-envelope-hint{font-size:19px;color:#f4d9e7;margin:8px 0 28px}
+#skipIntro{
+  position:relative;bottom:auto;left:auto;
+  min-width:250px;padding:16px 30px;border-radius:2px;
+  border:1px solid rgba(255,230,243,.72);
+  background:linear-gradient(110deg,#e8b1cd,#c67ba7 52%,#a95689);
+  box-shadow:0 12px 26px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.5);
+  font-size:9px;letter-spacing:3px;
+}
+#skipIntro:after{content:"";position:absolute;inset:4px;border:1px solid rgba(255,255,255,.22);pointer-events:none}
+#skipIntro:active{transform:translateY(1px)}
+@media(max-width:650px){
+  .intro{padding:32px 22px}
+  .intro-envelope-kicker{margin-bottom:38px;font-size:8px;letter-spacing:4px}
+  .intro-envelope{height:220px}
+  .intro-envelope-hint{font-size:18px;margin-bottom:30px}
+  #skipIntro{min-width:245px;padding:16px 24px}
+}
