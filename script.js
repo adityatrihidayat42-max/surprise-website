@@ -53,16 +53,21 @@ document.getElementById("playMain")?.addEventListener("click", () => {
   const player = document.getElementById("youtubeAudio");
   const button = document.getElementById("playMain");
   if (!player || !button) return;
-  if (!player.querySelector("iframe")) {
+
+  if (!player.classList.contains("is-visible")) {
     player.innerHTML = `<iframe
-      src="https://www.youtube-nocookie.com/embed/UppBA4u9pyQ?autoplay=1&rel=0"
-      title="Playlist song"
-      allow="autoplay; encrypted-media; picture-in-picture">
+      src="https://www.youtube-nocookie.com/embed/UppBA4u9pyQ?autoplay=1&rel=0&playsinline=1"
+      title="LANY - you! (official lyric video)"
+      allow="autoplay; encrypted-media; picture-in-picture; web-share"
+      allowfullscreen>
     </iframe>`;
-    button.textContent = "♪ PLAYING";
+    player.classList.add("is-visible");
+    button.textContent = "TUTUP PLAYER";
+    player.scrollIntoView({ behavior: "smooth", block: "center" });
   } else {
     player.innerHTML = "";
-    button.textContent = "▶ PLAY";
+    player.classList.remove("is-visible");
+    button.textContent = "▶ PUTAR LAGU";
   }
 });
 
