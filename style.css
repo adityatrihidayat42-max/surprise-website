@@ -1372,3 +1372,26 @@ body {background:linear-gradient(145deg,#fff5f8,#f9dce9 55%,#fbeaf1)}
  #playlist .trackbar button {min-width:104px}
  #gift .gift-note {width:min(380px,94%)}
 }
+
+
+/* FINISH THE PINK PAPER-GIFT DETAILS */
+.intro {background:radial-gradient(circle at 50% 25%,#fffafd,#f9d8e7 60%,#edb6cf);color:#96516f}
+.intro .intro-envelope-kicker,.intro .intro-envelope-hint {color:#a65e7e}
+.intro .skip {border:1px solid #d995b2;color:#985a77;background:#fff7fa99}
+.intro .intro-envelope {filter:drop-shadow(0 18px 24px #b56b8a44)}
+.memory-art {width:100%;height:100%;position:relative;overflow:hidden;display:grid;place-items:center;background:linear-gradient(145deg,#fff1f6,#f4c5d9)}
+.art-bouquet:before,.art-bouquet:after {content:"";position:absolute;width:18px;height:18px;border-radius:50%;background:#f5a8c7;box-shadow:0 -12px 0 -4px #f5a8c7,0 12px 0 -4px #f5a8c7,12px 0 0 -4px #f5a8c7,-12px 0 0 -4px #f5a8c7;top:35%;left:42%}
+.art-bouquet:after {left:62%;top:48%;transform:scale(.8);background:#fff7fb;box-shadow:0 -12px 0 -4px #fff7fb,0 12px 0 -4px #fff7fb,12px 0 0 -4px #fff7fb,-12px 0 0 -4px #fff7fb}
+.art-bouquet span,.art-bouquet i,.art-bouquet b {position:absolute;width:2px;height:55px;background:#8fa47b;top:48%;left:50%;transform:rotate(12deg)}
+.art-bouquet i {left:60%;height:45px;transform:rotate(-12deg)}.art-bouquet b {left:42%;height:42px;transform:rotate(24deg)}
+.art-ribbon:before,.art-ribbon:after {content:"";position:absolute;width:42px;height:28px;border:7px solid #df8eaf;border-radius:80% 20% 80% 20%;top:36%;left:24%;transform:rotate(25deg)}
+.art-ribbon:after {left:51%;transform:scaleX(-1) rotate(25deg)}.art-ribbon span {position:absolute;top:50%;left:48%;width:16px;height:16px;border-radius:50%;background:#c76d96}
+.art-bow span {width:35px;height:35px;border:7px solid #e69bb8;border-radius:80% 20% 80% 20%;transform:rotate(35deg);box-shadow:32px 0 0 -7px #f2b8ce}
+.art-flower span {width:20px;height:20px;border-radius:50%;background:#e89ab8;box-shadow:0 -20px #f4b8ce,0 20px #f4b8ce,20px 0 #f4b8ce,-20px 0 #f4b8ce,14px 14px #f4b8ce,-14px -14px #f4b8ce,14px -14px #f4b8ce,-14px 14px #f4b8ce}
+.art-flower i {width:6px;height:6px;border-radius:50%;background:#fff2c9;z-index:1}.art-flower b {position:absolute;width:2px;height:65px;background:#90a780;top:54%}
+.art-chat {font-family:"Cormorant Garamond",serif;font-style:italic;color:#a9577c;gap:5px;align-content:center}
+.art-chat span,.art-chat i {background:#fff8fb;padding:8px 12px;border-radius:14px;box-shadow:0 4px 12px #b86f8d22}
+.art-chat i {margin-left:20px}.art-chat b {width:8px;height:8px;border-radius:50%;background:#e7a1bd;box-shadow:14px 0 #e7a1bd,28px 0 #e7a1bd;margin-top:7px}
+.art-heart span {width:48px;height:48px;background:#df91b2;border-radius:9px 0 9px 0;transform:rotate(-45deg);position:relative}
+.art-heart span:before,.art-heart span:after {content:"";position:absolute;width:48px;height:48px;background:#df91b2;border-radius:50%}
+.art-heart span:before {top:-24px}.art-heart span:after {left:24px}
