@@ -1299,3 +1299,76 @@
     will-change:transform;
   }
 }
+
+
+/* PRINCESS & BOCIL — SOFT GIRLY PINK ART DIRECTION */
+html,body {background:#fff0f6;color:#70475c}
+body {background:linear-gradient(145deg,#fff5f8,#f9dce9 55%,#fbeaf1)}
+.app {color:#70475c;background:radial-gradient(ellipse at 12% 8%,#fffafd 0 12%,transparent 38%),radial-gradient(ellipse at 88% 20%,#f8c9ddaa 0 10%,transparent 34%),linear-gradient(150deg,#fff5f8 0%,#fbe3ed 52%,#f8d6e5 100%);overflow:visible}
+.app:before {position:absolute;background:radial-gradient(circle at 15% 30%,#fff9 0 1px,transparent 2px),radial-gradient(circle at 82% 65%,#fff9 0 1px,transparent 2px);background-size:44px 44px;opacity:.6}
+.topline {color:#b36d8d}.screen {color:#70475c}
+.home-title,.page-script {color:#b65f86;text-shadow:0 4px 14px #d98eae44}
+.subline {color:#a66c84}.choice {color:#87536b}
+.icon-art {filter:drop-shadow(0 8px 12px #d18aa744)}
+.choice-label {color:#a94f79;text-shadow:0 2px 7px #fff}
+.home-footer {color:#a66c84}
+.back {background:linear-gradient(135deg,#fffafd,#f5c9dc);color:#96516f;border:1px solid #e7aac4;box-shadow:0 3px 0 #d99ab5}
+.letter {background-color:#fff7fa;color:#765166;background-image:repeating-linear-gradient(transparent 0,transparent 29px,#f1d8e3 30px);box-shadow:0 14px 28px #b86f8d33}
+.letter-heading,.letter-sign {color:#b85d87}.letter-tape {background:#f2bfd4aa}
+.polaroid {background:#fffafd;color:#8d5b72;box-shadow:0 12px 24px #b86f8d33}
+.mini-audio,.trackbar {background:#fff8fb;color:#88566d;border:1px solid #edc4d5;box-shadow:0 8px 20px #c987a322}
+.mini-audio button,.trackbar button {background:linear-gradient(135deg,#f5bfd4,#e89dbd);color:#713d57}
+.audio-dot {background:#d97ca3;box-shadow:0 0 8px #d97ca3}
+.trackbar b {color:#b85d87}.trackbar small {color:#a66c84}
+.big-gift {background:linear-gradient(135deg,#f8d4e3,#df91b3);border:1px solid #f7dce8;box-shadow:0 15px 30px #b86f8d33}
+.gift-note {background:#fff8fb;color:#785167;box-shadow:0 12px 30px #b86f8d33;border:1px solid #f0c6d8;border-radius:12px}
+.gift-note-inner {border:1px dashed #dca1ba}.gift-note h2 {color:#b65f86}
+#playlist .record {animation:vinylGentleTurn 22s linear infinite}
+@keyframes vinylGentleTurn {from{transform:rotate(0)}to{transform:rotate(360deg)}}
+#playlist .tv-screen {position:relative;overflow:hidden;background:#f8d7e6}
+#playlist .playlist-tv-cover {width:100%;height:100%;object-fit:cover;display:block;transition:opacity .6s,transform .8s}
+#playlist .tv-screen.is-playing .playlist-tv-cover {opacity:0;transform:scale(1.08)}
+#playlist .tv-visual {position:absolute;inset:0;display:none;overflow:hidden;place-items:center;background:radial-gradient(circle at 50% 48%,#fff9fc 0 4%,#fbdce9 30%,#edabc8 100%)}
+#playlist .tv-screen.is-playing .tv-visual {display:grid;animation:tvVisualIn .8s ease both}
+@keyframes tvVisualIn {from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}
+.visual-orbit {position:absolute;width:62%;aspect-ratio:1;border:1px solid #fff9;border-radius:50%}
+.orbit-one {transform:rotate(28deg) scaleX(.75)}.orbit-two {transform:rotate(-28deg) scaleX(.75)}
+.visual-heart {width:42px;height:42px;background:#dc83aa;transform:rotate(-45deg);border-radius:9px 0 10px 0;box-shadow:0 8px 22px #b64c7b44;animation:heartFloat 3.5s ease-in-out infinite}
+.visual-heart:before,.visual-heart:after {content:"";position:absolute;width:42px;height:42px;background:#dc83aa;border-radius:50%}
+.visual-heart:before {top:-21px;left:0}.visual-heart:after {left:21px;top:0}
+@keyframes heartFloat {0%,100%{transform:translateY(0) rotate(-45deg) scale(.95)}50%{transform:translateY(-7px) rotate(-45deg) scale(1.05)}}
+.visual-flower {position:absolute;width:18px;height:18px;border-radius:50%;background:#fff7fb;box-shadow:0 -11px 0 -3px #fff7fb,0 11px 0 -3px #fff7fb,11px 0 0 -3px #fff7fb,-11px 0 0 -3px #fff7fb,8px 8px 0 -3px #fff7fb,-8px -8px 0 -3px #fff7fb,8px -8px 0 -3px #fff7fb,-8px 8px 0 -3px #fff7fb}
+.flower-one {left:18%;top:24%;transform:scale(.55)}.flower-two {right:16%;bottom:24%;transform:scale(.42)}
+.visual-spark {position:absolute;width:7px;height:7px;background:#fff;border-radius:50%;box-shadow:0 0 12px 3px #fff;animation:sparkleDrift 2.8s ease-in-out infinite}
+.spark-one {left:30%;bottom:23%}.spark-two {right:28%;top:20%;animation-delay:1.2s}
+@keyframes sparkleDrift {0%,100%{opacity:.3;transform:scale(.6)}50%{opacity:1;transform:scale(1.35)}}
+.visual-caption {position:absolute;bottom:9px;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:13px;letter-spacing:2px;color:#a75279}
+#playlist .tv-youtube {position:absolute;width:1px;height:1px;left:-10px;bottom:-10px;opacity:0;pointer-events:none;border:0}
+@media(max-width:650px) {
+ .app {padding:20px 16px 30px}
+ .screen {min-height:calc(100svh - 40px);padding:52px 0 28px}
+ .home-title {font-size:clamp(45px,12vw,58px);line-height:1.05}
+ .choices {gap:26px 14px;margin-top:18px}
+ .icon-art {width:105px;height:100px}
+ .home-footer {margin-top:35px;text-align:center}
+ #journey .journey-scene {height:570px}
+ #journey .letter {left:2%;top:10px;width:82%;min-height:340px;padding:25px 20px;font-size:16px;z-index:2}
+ #journey .hero-photo {right:3%;top:350px;width:165px;height:190px}
+ #journey .small-photo {left:3%;right:auto;bottom:0;width:125px;height:145px}
+ #moments .memory-wall {height:510px}
+ #moments .memory-wall .polaroid {width:135px;height:160px}
+ #moments .memory-wall .p1 {left:1%;top:35px}
+ #moments .memory-wall .p2 {left:auto;right:1%;top:10px}
+ #moments .memory-wall .p3 {left:4%;top:220px}
+ #moments .memory-wall .p4 {right:2%;top:205px}
+ #moments .memory-wall .p5 {left:34%;bottom:0;width:120px;height:145px}
+ #playlist .retro-room {height:410px;min-height:410px;margin:8px auto 22px}
+ #playlist .tv {width:56%;height:220px;left:0;top:10px}
+ #playlist .tv-screen {height:145px}
+ #playlist .radio {right:0;top:38px;width:34%;height:112px}
+ #playlist .cassette {left:0;bottom:10px;width:43%;height:78px}
+ #playlist .record {right:5%;bottom:0;width:clamp(108px,31vw,122px);height:clamp(108px,31vw,122px)}
+ #playlist .trackbar {width:100%;gap:10px;padding:13px 12px}
+ #playlist .trackbar button {min-width:104px}
+ #gift .gift-note {width:min(380px,94%)}
+}
