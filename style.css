@@ -1723,3 +1723,43 @@ body{background:linear-gradient(145deg,#fff7fa,#f8e0ea 58%,#fceef4)}
 @media(prefers-reduced-motion:reduce){
  .ambient-dot,#moments .memory-illustration{animation:none!important}
 }
+
+
+/* MOBILE WIDTH GUARD — keep decorative edges inside the viewport */
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+.app {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
+}
+.screen {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: clip;
+}
+.journey-book,
+.story-card,
+.memory-wall,
+.memory-card,
+.retro-room,
+.trackbar {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+@media (max-width: 650px) {
+  .app { padding-left: 16px; padding-right: 16px; }
+  .page-script,
+  .subline,
+  .story-card h2,
+  .story-card p {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
