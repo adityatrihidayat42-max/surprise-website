@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=1002">
+<link rel="stylesheet" href="style.css?v=1003">
 </head>
 <body>
 <div class="intro" id="intro">
@@ -88,17 +88,30 @@
   <section id="playlist" class="screen">
     <button class="back">BACK</button>
     <h1 class="page-script">Our Playlist</h1>
-    <p class="subline">songs for the sweetest memories</p>
-    <div class="retro-room">
-      <div class="tv">
-        <div class="tv-top">NOW PLAYING</div><div class="tv-screen"><div class="equalizer"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><strong>GOOD<br>VIBRATIONS</strong></div>
-        <div class="tv-controls"><span></span><span></span><span></span></div>
+    <p class="subline">a song that reminds me of you</p>
+    <div class="album-card">
+      <img class="album-cover" src="playlist-cover.jpg" alt="MAMA'S BOY — album cover">
+      <div class="album-caption">
+        <span class="album-kicker">NOW PLAYING</span>
+        <h2>MAMA'S BOY</h2>
+        <p>our special song</p>
       </div>
-      <div class="radio"><div class="radio-brand">LOVE FM</div><div class="radio-window">98.8 FM</div><div class="radio-knobs"><i></i><i></i><i></i></div></div>
-      <div class="record"><div class="record-label"></div></div>
-      <div class="cassette"><span>LOVE MIX</span><i></i><i></i></div>
     </div>
-    <div class="trackbar"><div><b>01.</b> A song for you <small>special memories</small></div><button id="playMain">▶ PLAY</button></div>
+    <div class="lyrics-card">
+      <span class="lyrics-heading">THE LYRICS</span>
+      <p>You're the sun to the moon<br>
+      You're my ocean painted blue<br>
+      You, I'm nothing without you<br>
+      (Without you, without you)<br><br>
+      You're the light in the dark<br>
+      You're the arrow through my heart<br>
+      You, I'm nothing without you (Oh, oh)<br>
+      I'm nothing without you (Oh, oh)<br>
+      I’m nothing without you (Oh, oh)<br>
+      I’m nothing without you</p>
+    </div>
+    <div class="trackbar"><div><b>01.</b> A song for you <small>just for you</small></div><button id="playMain">▶ PLAY</button></div>
+    <div id="youtubeAudio" class="youtube-audio" aria-hidden="true"></div>
   </section>
 
   <section id="gift" class="screen">
@@ -111,7 +124,7 @@
 
   <audio id="song" preload="none" loop></audio>
 </main>
-<script src="script.js?v=1001"></script>
+<script src="script.js?v=1002"></script>
 <script src="music.js"></script>
 
 </body>
