@@ -72,3 +72,20 @@ if (sparkle) {
     sparkle.appendChild(star);
   }
 }
+
+
+/* ENVELOPE REVEAL */
+const envelopeButton = document.getElementById("openEnvelope");
+const envelopeVisual = document.getElementById("envelopeVisual");
+const envelopeHint = document.getElementById("envelopeHint");
+const loveLetter = document.getElementById("loveLetter");
+
+envelopeButton?.addEventListener("click", () => {
+  const isOpen = envelopeVisual?.classList.toggle("open") ?? false;
+  envelopeButton.setAttribute("aria-expanded", String(isOpen));
+  envelopeButton.textContent = isOpen ? "CLOSE THE ENVELOPE" : "OPEN THE ENVELOPE";
+  if (loveLetter) loveLetter.setAttribute("aria-hidden", String(!isOpen));
+  if (envelopeHint) envelopeHint.textContent = isOpen
+    ? "a little note, made just for you"
+    : "tap the envelope to read your letter";
+});
