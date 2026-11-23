@@ -1518,3 +1518,29 @@ body{background:linear-gradient(145deg,#fff7fa,#f8e0ea 58%,#fceef4)}
  #gift .gift-note{width:min(390px,96%)}
 }
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
+
+
+/* MOMENTS — a neater little scrapbook */
+.scrapbook-heading{width:min(760px,100%);display:flex;align-items:center;justify-content:center;gap:13px;margin:0 auto 17px;color:#bd829b;font-size:8px;letter-spacing:2px}
+.scrapbook-heading i{display:block;width:42px;height:1px;background:#e5b5c9}
+#moments .memory-wall{gap:18px;max-width:780px}
+#moments .memory-card{min-height:246px;padding:13px 13px 17px;background:linear-gradient(160deg,#fff 0%,#fffafd 72%,#fff4f8 100%);border:1px solid #ead0da;border-radius:3px;box-shadow:0 5px 0 #f2dce5,0 13px 24px #a9688320;transition:transform .25s,box-shadow .25s}
+#moments .memory-card:before{content:"";position:absolute;top:-1px;left:50%;width:48px;height:15px;transform:translateX(-50%) rotate(-3deg);background:#e9bfd0b8;border-left:1px solid #fff8fb;border-right:1px solid #fff8fb;z-index:2}
+#moments .memory-card:nth-child(2):before{transform:translateX(-50%) rotate(3deg);background:#f1d7b9c9}
+#moments .memory-card:nth-child(3):before{background:#d9d8ecbd}
+#moments .memory-card:nth-child(4):before{background:#e9bfd0b8}
+#moments .memory-card:hover{transform:translateY(-5px) rotate(0)!important;box-shadow:0 7px 0 #f2dce5,0 18px 28px #a9688328}
+#moments .memory-illustration{height:122px;margin-top:5px;border:1px solid #f0dce5;background:linear-gradient(145deg,#fff5f8,#f5dce7)}
+#moments .memory-label{display:block;margin-top:2px;font-size:8px;letter-spacing:1.5px}
+#moments .memory-card p{font-size:17px;line-height:1.35}
+#moments .moments-footer{margin-top:22px}
+.secret-whisper{margin:12px auto 0;padding:7px 13px;border:0;border-bottom:1px dashed #d7a2b9;background:transparent;color:#b77a94;font-family:"Cormorant Garamond",serif;font-style:italic;font-size:15px;cursor:pointer}
+.secret-whisper:hover{color:#98516f}
+.secret-message{margin:9px auto 0;padding:11px 16px;max-width:330px;text-align:center;background:#fffafd;border:1px dashed #e5bfd0;border-radius:8px;color:#a45e7e;font-family:"Cormorant Garamond",serif;font-size:17px;font-style:italic;box-shadow:0 8px 18px #b86f8d16;animation:screenIn .35s ease both}
+@media(max-width:650px){
+ #moments .memory-wall{gap:14px 12px}
+ #moments .memory-card{min-height:225px;padding:12px 10px 15px}
+ #moments .memory-illustration{height:105px}
+ #moments .memory-card p{font-size:16px}
+ .scrapbook-heading{margin-bottom:13px}
+}
