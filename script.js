@@ -57,3 +57,13 @@ if(sparkle){
     sparkle.appendChild(dot);
   }
 }
+
+
+const whisperButton=document.getElementById("secretWhisper");
+const whisperMessage=document.getElementById("secretMessage");
+whisperButton?.addEventListener("click",()=>{
+  const opening=whisperMessage?.hidden??true;
+  if(whisperMessage)whisperMessage.hidden=!opening;
+  whisperButton.setAttribute("aria-expanded",String(opening));
+  whisperButton.textContent=opening?"simpan pesan kecil ini":"psst... ada satu pesan kecil";
+});
