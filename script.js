@@ -50,7 +50,25 @@ document.getElementById("playMini")?.addEventListener("click", () => {
 
 
 document.getElementById("playMain")?.addEventListener("click", () => {
-  window.open("https://www.youtube.com/watch?v=UppBA4u9pyQ", "_blank", "noopener");
+  const screen = document.querySelector("#playlist .tv-screen");
+  const button = document.getElementById("playMain");
+  if (!screen || !button) return;
+
+  const currentPlayer = screen.querySelector("iframe.tv-youtube");
+  if (currentPlayer) {
+    currentPlayer.remove();
+    button.textContent = "▶ PLAY";
+    return;
+  }
+
+  const player = document.createElement("iframe");
+  player.className = "tv-youtube";
+  player.src = "https://www.youtube-nocookie.com/embed/UppBA4u9pyQ?autoplay=1&start=120&end=191&playsinline=1&rel=0";
+  player.title = "LANY - you! (official lyric video), selected section";
+  player.allow = "autoplay; encrypted-media; picture-in-picture";
+  player.allowFullscreen = true;
+  screen.appendChild(player);
+  button.textContent = "■ STOP";
 });
 
 const sparkle = document.querySelector(".sparkles");
