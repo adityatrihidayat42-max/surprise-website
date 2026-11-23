@@ -50,18 +50,20 @@ document.getElementById("playMini")?.addEventListener("click", () => {
 
 
 document.getElementById("playMain")?.addEventListener("click", () => {
-  const screen = document.querySelector(".tv-screen");
-  if (!screen) return;
-
-  screen.innerHTML = `
-    <iframe
-      class="tv-youtube"
+  const player = document.getElementById("youtubeAudio");
+  const button = document.getElementById("playMain");
+  if (!player || !button) return;
+  if (!player.querySelector("iframe")) {
+    player.innerHTML = `<iframe
       src="https://www.youtube-nocookie.com/embed/UppBA4u9pyQ?autoplay=1&rel=0"
-      title="LANY - you!"
-      allow="autoplay; encrypted-media; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  `;
+      title="Playlist song"
+      allow="autoplay; encrypted-media; picture-in-picture">
+    </iframe>`;
+    button.textContent = "♪ PLAYING";
+  } else {
+    player.innerHTML = "";
+    button.textContent = "▶ PLAY";
+  }
 });
 
 const sparkle = document.querySelector(".sparkles");
