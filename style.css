@@ -514,3 +514,41 @@
   #playlist .lyrics-card{max-height:30vh;padding:14px 12px;margin-bottom:13px}
   #playlist .lyrics-card p{font-size:17px;line-height:1.45}
 }
+
+
+/* PLAYLIST MOBILE + REAL SONG PLAYER FIX */
+#playlist .lyrics-card{
+  max-height:none !important;
+  overflow:visible !important;
+  flex-shrink:0;
+  padding:22px 18px;
+  margin-bottom:18px;
+}
+#playlist .lyrics-card p{line-height:1.65}
+#playlist .youtube-player{
+  display:none;
+  width:min(540px,100%);
+  aspect-ratio:16/9;
+  margin:16px auto 28px;
+  overflow:hidden;
+  border:1px solid rgba(255,220,238,.38);
+  border-radius:8px;
+  background:#100b16;
+  box-shadow:0 12px 30px #16001888;
+}
+#playlist .youtube-player.is-visible{display:block}
+#playlist .youtube-player iframe{
+  display:block;width:100%;height:100%;border:0;
+}
+#playlist .trackbar button{min-width:130px}
+@media(max-width:650px){
+  .app{overflow:visible}
+  #playlist.screen{justify-content:flex-start;min-height:calc(100svh - 40px);padding-top:56px;padding-bottom:42px}
+  #playlist .page-script{margin-top:8px}
+  #playlist .subline{margin-bottom:18px}
+  #playlist .album-card{width:min(290px,76vw);margin-bottom:18px}
+  #playlist .lyrics-card{width:100%;max-height:none;margin-bottom:18px;padding:18px 14px}
+  #playlist .lyrics-card p{font-size:18px;line-height:1.55}
+  #playlist .trackbar{margin-bottom:14px}
+  #playlist .youtube-player{width:100%;margin:14px auto 28px}
+}
