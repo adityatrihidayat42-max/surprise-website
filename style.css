@@ -610,3 +610,121 @@
   opacity: 1;
   transform: scale(1);
 }
+
+
+/* PLAYLIST: FIT ONE PHONE SCREEN + SLOW VINYL */
+@keyframes vinylGentleTurn {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+#playlist .record {
+  animation: vinylGentleTurn 24s linear infinite !important;
+  transform-origin: center center;
+}
+@media (max-width:650px) {
+  body:has(#playlist.active) {
+    height:100svh;
+    overflow:hidden !important;
+    overscroll-behavior:none;
+  }
+  body:has(#playlist.active) .app {
+    height:100svh !important;
+    min-height:100svh !important;
+    overflow:hidden !important;
+    padding:12px 16px 10px !important;
+  }
+  body:has(#playlist.active) #playlist.screen,
+  body:has(#playlist.active) #playlist.screen.active {
+    height:100% !important;
+    min-height:0 !important;
+    max-height:100% !important;
+    overflow:hidden !important;
+    padding:48px 0 8px !important;
+    justify-content:space-evenly !important;
+    gap:0 !important;
+  }
+  #playlist .back {
+    top:2px !important;
+    right:0 !important;
+  }
+  #playlist .page-script {
+    font-size:clamp(42px,12vw,56px) !important;
+    line-height:1 !important;
+    margin:0 0 3px !important;
+  }
+  #playlist .subline {
+    font-size:12px !important;
+    margin:0 0 5px !important;
+    line-height:1.15 !important;
+  }
+  #playlist .retro-room {
+    width:100% !important;
+    height:clamp(245px,38svh,340px) !important;
+    min-height:0 !important;
+    flex:0 1 auto !important;
+    margin:0 auto !important;
+  }
+  #playlist .tv {
+    left:0 !important;
+    top:2% !important;
+    width:62% !important;
+    height:57% !important;
+    border-width:8px !important;
+    padding:8px !important;
+  }
+  #playlist .tv-screen {
+    height:calc(100% - 34px) !important;
+  }
+  #playlist .tv-top {
+    height:25px !important;
+  }
+  #playlist .tv-controls {
+    padding-top:5px !important;
+    gap:12px !important;
+  }
+  #playlist .radio {
+    right:0 !important;
+    top:17% !important;
+    width:34% !important;
+    height:35% !important;
+    padding:6px !important;
+    border-width:6px !important;
+  }
+  #playlist .radio-brand {font-size:9px !important;letter-spacing:2px !important}
+  #playlist .radio-window {margin:6px 0 !important;padding:5px !important;font-size:11px !important}
+  #playlist .radio-knobs {gap:5px !important}
+  #playlist .radio-knobs i {width:9px !important;height:9px !important}
+  #playlist .cassette {
+    left:0 !important;
+    bottom:2% !important;
+    width:48% !important;
+    height:24% !important;
+    padding:7px !important;
+    font-size:11px !important;
+  }
+  #playlist .cassette i {width:19px !important;height:19px !important;margin:4px 7px 0 !important}
+  #playlist .record {
+    right:5% !important;
+    bottom:0 !important;
+    width:37vw !important;
+    height:37vw !important;
+    max-width:145px !important;
+    max-height:145px !important;
+  }
+  #playlist .record-label {width:36% !important;height:36% !important}
+  #playlist .trackbar {
+    flex:0 0 auto !important;
+    width:100% !important;
+    margin:0 auto !important;
+    padding:10px 13px !important;
+  }
+  #playlist .trackbar button {min-width:110px !important;padding:9px 14px !important}
+}
+@media (max-height:700px) and (max-width:650px) {
+  body:has(#playlist.active) #playlist.screen {padding-top:40px !important}
+  #playlist .retro-room {height:34svh !important}
+  #playlist .page-script {font-size:42px !important}
+}
+@media (prefers-reduced-motion: reduce) {
+  #playlist .record {animation:none !important}
+}
