@@ -1624,3 +1624,102 @@ body{background:linear-gradient(145deg,#fff7fa,#f8e0ea 58%,#fceef4)}
 @media(prefers-reduced-motion:reduce){
  #home .choice .icon-art{animation:none}
 }
+
+
+/* A MORE ALIVE PRINCESS WORLD — layered paper, blooms and gentle motion */
+.app{
+ background:
+ radial-gradient(ellipse at 0% 25%,#f8c9dc99 0 12%,transparent 36%),
+ radial-gradient(ellipse at 100% 72%,#e9c5e8aa 0 10%,transparent 34%),
+ radial-gradient(ellipse at 52% 0%,#fff 0 13%,transparent 45%),
+ linear-gradient(135deg,#fff7fa 0%,#f8e3ed 42%,#f2e6f4 72%,#fff2f7 100%);
+}
+.app:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.38;background:
+ repeating-linear-gradient(0deg,transparent 0 5px,#dba9bf0a 6px 7px),
+ radial-gradient(circle at 15% 30%,#fff 0 1px,transparent 2px),
+ radial-gradient(circle at 75% 65%,#fff 0 1.5px,transparent 2.5px);
+ background-size:auto,43px 47px,61px 59px}
+.topline{z-index:3;padding:8px 18px;background:#fff9fc99;border-bottom:1px solid #eac8d7;letter-spacing:3px}
+.screen{z-index:1}
+.screen:before,.screen:after{width:170px;height:170px;opacity:.82;filter:drop-shadow(0 8px 10px #d9a0b922)}
+#home{padding-top:68px}
+#home .home-title{font-size:clamp(58px,9vw,92px);letter-spacing:.3px}
+#home .subline{font-size:clamp(16px,2vw,20px)}
+#home .choices{max-width:900px;gap:clamp(16px,2.5vw,28px);margin-top:28px}
+#home .choice{min-height:218px;padding:20px 12px 18px;border-radius:24px 24px 9px 24px;border:1px solid #e7b5cb;background:
+ linear-gradient(145deg,#ffffff 0%,#fff9fc 45%,#f8e3ed 100%);
+ box-shadow:0 6px 0 #e9c7d6,0 17px 30px #a95d8026,inset 0 0 0 6px #fff;
+}
+#home .choice:before{width:13px;height:13px;top:13px;right:14px;background:#d990b0;box-shadow:0 0 0 4px #f8e4ed,0 0 0 5px #fff}
+#home .choice:after{width:48px;height:11px;bottom:-7px;border-radius:0 0 10px 10px;background:#e4b3c8}
+#home .choice:nth-child(2n){transform:translateY(13px)}
+#home .choice:hover{transform:translateY(-6px) rotate(-1deg)}
+#home .choice:nth-child(2n):hover{transform:translateY(5px) rotate(1deg)}
+#home .icon-art{width:clamp(100px,13vw,142px);height:clamp(96px,12vw,132px);filter:drop-shadow(0 10px 11px #b56d8d55)}
+#home .choice-label{font-size:clamp(32px,3.4vw,42px)}
+#home .choice-caption{font-size:16px}
+#home .home-footer{margin-top:60px;padding:13px 30px;background:#fffdf8d9;border:1px solid #ebc9d7;box-shadow:0 8px 20px #b879941b}
+#home .home-footer:before,#home .home-footer:after{width:10px;height:10px;background:#d98eae}
+#journey .journey-book{max-width:850px;gap:22px;margin-top:24px}
+#journey .story-card{min-height:360px;padding:30px 23px 25px;border-radius:15px 15px 26px 8px;background:
+ linear-gradient(135deg,#fff 0%,#fff9fc 65%,#f8e4ed 100%);
+ box-shadow:0 7px 0 #efd7e1,0 18px 30px #a9688328,inset 0 0 0 6px #fff}
+#journey .story-card:nth-child(2){transform:translateY(16px);background:linear-gradient(145deg,#fff,#fff5ed)}
+#journey .story-card:nth-child(3){background:linear-gradient(145deg,#fff,#f5effa)}
+#journey .story-card:before{inset:12px;border:1px dashed #e8c4d4;border-radius:8px}
+#journey .story-card:after{content:"";position:absolute;top:-19px;right:-18px;width:76px;height:76px;background:radial-gradient(circle,#e8b1c9 0 13%,#fff 14% 19%,transparent 20%);opacity:.8}
+#journey .story-card h2{font-size:29px}
+#journey .firework-art,#journey .chat-art,#journey .ribbon-art{transform:scale(1.12);margin-bottom:8px}
+#moments .memory-intro{max-width:600px;padding:13px 20px;background:#fff9fcaa;border-left:3px solid #e4b1c7;border-right:3px solid #e4b1c7;border-radius:12px}
+#moments .memory-wall{max-width:840px;gap:24px}
+#moments .memory-card{min-height:270px;padding:18px 15px 20px;border-radius:4px 4px 18px 4px;background:linear-gradient(145deg,#fff 0%,#fffafd 62%,#fff1f6 100%);box-shadow:0 6px 0 #f0d9e3,0 18px 28px #9f638022,inset 0 0 0 5px #fff}
+#moments .memory-card:nth-child(1){transform:rotate(-3deg) translateY(7px)}
+#moments .memory-card:nth-child(2){transform:rotate(2.7deg) translateY(-7px)}
+#moments .memory-card:nth-child(3){transform:rotate(-2deg) translateY(9px)}
+#moments .memory-card:nth-child(4){transform:rotate(3deg) translateY(-5px)}
+#moments .memory-illustration{height:142px;border-radius:8px}
+#moments .memory-label{font-size:9px;letter-spacing:1.8px}
+#moments .memory-card p{font-size:18px}
+#moments .scrapbook-heading{margin-bottom:23px;padding:9px 16px;border-top:1px dashed #d9a6bd;border-bottom:1px dashed #d9a6bd;max-width:380px}
+#playlist .retro-room{max-width:790px;height:365px;margin-top:15px}
+#playlist .tv{border-color:#604458;background:linear-gradient(145deg,#544052,#241b2a);box-shadow:0 8px 0 #3b2938,0 22px 32px #4a244044,inset 0 0 0 4px #a9879d}
+#playlist .radio{background:linear-gradient(145deg,#ffe4ef,#d68eaf);border-color:#62415a;box-shadow:0 8px 0 #794565,0 18px 26px #4a244044}
+#playlist .cassette{background:linear-gradient(145deg,#ffe8f1,#e5a9c4);border-color:#62415a;box-shadow:0 7px 0 #75435f,0 16px 24px #4a244044}
+#playlist .record{border:5px solid #e5b7cd;box-shadow:0 0 0 5px #fff7fa,0 15px 25px #4a244044}
+#playlist .trackbar{max-width:590px;padding:16px 20px;border-radius:18px;background:linear-gradient(120deg,#fff,#fff0f6);box-shadow:0 7px 0 #eed5e0,0 16px 26px #a9688320}
+#gift .gift-envelope{transform:rotate(-2deg) scale(1.08);margin:25px auto 17px}
+#gift .gift-note{max-width:480px;border-radius:5px;background:linear-gradient(145deg,#fff,#fff6fa);box-shadow:0 7px 0 #f0d9e3,0 18px 32px #a9688328}
+#gift .gift-note-inner{border:1px dashed #dca9bf;padding:30px 28px;background:repeating-linear-gradient(transparent 0 34px,#f1e1e8 35px),#fffdfd}
+#gift .gift-note h2{font-size:48px}
+#gift .gift-note p{font-size:20px}
+.ambient-dot{position:absolute;width:6px;height:6px;border-radius:50%;background:#fff;box-shadow:0 0 10px 3px #e6a9c8aa;animation:twinkleFloat 5s ease-in-out infinite;pointer-events:none}
+.ambient-dot:nth-child(3n){width:4px;height:4px;background:#e4a1bf;box-shadow:0 0 8px 2px #e4a1bf66}
+.ambient-dot:nth-child(4n){width:8px;height:8px;background:#fff4c9;box-shadow:0 0 12px 3px #eacb9a88}
+@keyframes twinkleFloat{0%,100%{opacity:.15;transform:translate3d(0,0,0) scale(.7)}50%{opacity:.9;transform:translate3d(7px,-13px,0) scale(1.25)}}
+@keyframes gentleSway{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2deg)}}
+#moments .memory-card:nth-child(odd) .memory-illustration{animation:gentleSway 7s ease-in-out infinite}
+#moments .memory-card:nth-child(even) .memory-illustration{animation:gentleSway 8s ease-in-out infinite reverse}
+@media(max-width:650px){
+ #home{padding-top:57px}
+ #home .home-title{font-size:clamp(50px,13vw,65px)}
+ #home .choices{gap:18px 13px;margin-top:21px}
+ #home .choice{min-height:178px;padding:13px 8px 14px}
+ #home .choice:nth-child(2n){transform:none}
+ #home .icon-art{width:98px;height:91px}
+ #home .choice-label{font-size:32px}
+ #home .choice-caption{font-size:14px}
+ #home .home-footer{margin-top:32px}
+ #journey .journey-book{gap:17px}
+ #journey .story-card{min-height:0;padding:27px 22px}
+ #journey .story-card:nth-child(2){transform:none}
+ #moments .memory-wall{gap:17px 13px}
+ #moments .memory-card{min-height:242px;padding:14px 11px 16px}
+ #moments .memory-card:nth-child(n){transform:none}
+ #moments .memory-illustration{height:116px}
+ #moments .memory-card p{font-size:16px}
+ #playlist .retro-room{height:410px}
+ #gift .gift-note-inner{padding:24px 17px}
+}
+@media(prefers-reduced-motion:reduce){
+ .ambient-dot,#moments .memory-illustration{animation:none!important}
+}
