@@ -41,6 +41,12 @@
         <span class="icon-art gift-art"><svg viewBox="0 0 110 100"><path d="M17 43h76v48H17z" fill="#c85b91" stroke="#54213e" stroke-width="3"/><path d="M12 31h86v17H12z" fill="#f4d5e3" stroke="#54213e" stroke-width="3"/><path d="M50 31C18 29 24 3 43 12c9 4 10 19 12 19Zm10 0c32-2 26-28 7-19-9 4-10 19-12 19Z" fill="#eaa8c8" stroke="#54213e" stroke-width="3"/><path d="M53 31v60" stroke="#f6d9e8" stroke-width="7"/></svg></span>
         <span class="choice-label">Gift</span>
       </button>
+      <button class="choice" data-go="envelope">
+        <span class="icon-art envelope-art" aria-hidden="true">
+          <svg viewBox="0 0 110 100"><rect x="9" y="22" width="92" height="62" rx="7" fill="#f8dce9" stroke="#54213e" stroke-width="3"/><path d="M12 27 55 60 98 27" fill="none" stroke="#b65b8c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 80 42 53M98 80 68 53" stroke="#b65b8c" stroke-width="3"/><path d="M55 50c-10-9-20 4 0 17 20-13 10-26 0-17Z" fill="#c85b91"/></svg>
+        </span>
+        <span class="choice-label">Letter</span>
+      </button>
     </div>
     <div class="home-footer">made with  just for you</div>
   </section>
@@ -99,9 +105,35 @@
     <button class="big-gift" id="openGift"><span class="gift-illustration">✧</span><span>OPEN YOUR GIFT</span></button>
     <div class="gift-note" id="giftNote"><div class="gift-note-inner"><h2>For You</h2><p>Wishing you endless happiness, beautiful adventures, and all the little things that make your heart smile.</p><span>with love</span></div></div>
   </section>
+  <section id="envelope" class="screen">
+    <button class="back">BACK</button>
+    <h1 class="page-script">A Letter For You</h1>
+    <p class="subline">a little message, sealed with love</p>
+    <div class="envelope-stage">
+      <div class="envelope" id="envelopeVisual">
+        <article class="love-letter" id="loveLetter" aria-hidden="true">
+          <div class="love-letter-inner">
+            <p class="letter-kicker">A LITTLE NOTE</p>
+            <h2>Dear You,</h2>
+            <p>I hope you never forget how special you are. You make ordinary moments feel brighter just by being yourself.</p>
+            <p>Thank you for every laugh, every memory, and every little thing that makes our story beautiful. Whatever comes next, I hope life gives you a thousand reasons to smile.</p>
+            <p class="letter-closing">With all my love,</p>
+            <p class="letter-signature">Someone who cares</p>
+          </div>
+        </article>
+        <div class="envelope-back"></div>
+        <div class="envelope-pocket"></div>
+        <div class="envelope-flap"></div>
+        <div class="envelope-seal">♥</div>
+      </div>
+    </div>
+    <button class="open-envelope" id="openEnvelope" type="button" aria-expanded="false">OPEN THE ENVELOPE</button>
+    <p class="envelope-hint" id="envelopeHint">tap the envelope to read your letter</p>
+  </section>
   <audio id="song" preload="none" loop></audio>
 </main>
-<script src="script.js?v=999"></script>
+<script src="script.js?v=1000"></script>
+<script src="music.js"></script>
 
 </body>
 </html>
