@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#260026">
-<title>Choose the Surprise</title>
+<title>A Little Gift for Princess</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=1015">
+<link rel="stylesheet" href="style.css?v=1016">
 </head>
 <body>
 <div class="intro" id="intro">
@@ -28,11 +28,11 @@
 
 <main id="app" class="app hidden">
   <div class="sparkles" aria-hidden="true"></div>
-  <header class="topline"><span>A SPECIAL DAY, MADE FOR YOU</span></header>
+  <header class="topline"><span>A LITTLE WORLD MADE JUST FOR YOU</span></header>
 
   <section id="home" class="screen active">
-    <div class="home-title">Choose the Surprise</div>
-    <p class="subline">A little collection of moments, memories & love</p>
+    <div class="home-title">A Little Gift for You</div>
+    <p class="subline">a tiny world for Princess, made with care</p>
     <div class="choices">
       <button class="choice" data-go="journey">
         <span class="icon-art camera-art"><svg viewBox="0 0 120 90"><path d="M14 27h22l8-12h31l8 12h23a7 7 0 0 1 7 7v42a7 7 0 0 1-7 7H14a7 7 0 0 1-7-7V34a7 7 0 0 1 7-7Z" fill="#f4d9df" stroke="#51213d" stroke-width="3"/><circle cx="60" cy="53" r="23" fill="#c17b9c" stroke="#51213d" stroke-width="4"/><circle cx="60" cy="53" r="14" fill="#35213b"/><circle cx="65" cy="47" r="5" fill="#f8dce9"/><rect x="87" y="35" width="12" height="8" rx="2" fill="#b14f83"/></svg></span>
@@ -51,12 +51,12 @@
         <span class="choice-label">Gift</span>
       </button>
     </div>
-    <div class="home-footer">made with  just for you</div>
+    <div class="home-footer">made with care, from Bocil to Princess</div>
   </section>
 
   <section id="journey" class="screen">
     <button class="back">BACK</button>
-    <h1 class="page-script">Our Journey</h1>
+    <h1 class="page-script">How It Began</h1>
     <div class="journey-scene">
       
       <article class="letter">
@@ -75,7 +75,7 @@
   <section id="moments" class="screen">
     <button class="back">BACK</button>
     <h1 class="page-script">Our Moments</h1>
-    <p class="subline">memories that feel like sunshine</p>
+    <p class="subline">little things, kept with a lot of fondness</p>
     <div class="memory-wall">
       <figure class="polaroid p1"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=500&q=85" alt="Friends together"><figcaption>the good times</figcaption></figure>
       <figure class="polaroid p2"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=500&q=85" alt="Celebration"><figcaption>one lovely day</figcaption></figure>
@@ -88,12 +88,13 @@
   <section id="playlist" class="screen">
     <button class="back">BACK</button>
     <h1 class="page-script">Our Playlist</h1>
-    <p class="subline">songs for the sweetest memories</p>
+    <p class="subline">one little song, a thousand little feelings</p>
     <div class="retro-room">
       <div class="tv">
         <div class="tv-top">NOW PLAYING</div>
         <div class="tv-screen">
-          <img class="playlist-tv-cover" src="playlist-cover.jpg" alt="MAMA'S BOY album cover">
+          <img class="playlist-tv-cover" src="playlist-cover.jpg" alt="MAMA’S BOY album cover">
+          <div class="tv-visual" aria-hidden="true"><span class="visual-orbit orbit-one"></span><span class="visual-orbit orbit-two"></span><span class="visual-heart"></span><span class="visual-flower flower-one"></span><span class="visual-flower flower-two"></span><span class="visual-spark spark-one"></span><span class="visual-spark spark-two"></span><span class="visual-caption">a song for you</span></div>
         </div>
         <div class="tv-controls"><span></span><span></span><span></span></div>
       </div>
@@ -105,7 +106,7 @@
       <div class="record"><div class="record-label"></div></div>
       <div class="cassette"><span>LOVE MIX</span><i></i><i></i></div>
     </div>
-    <div class="trackbar"><div><b>01.</b> A song for you <small>special memories</small></div><button id="playMain">▶ PLAY</button></div>
+    <div class="trackbar"><div><b>01.</b> you! — LANY <small>for my favourite Princess</small></div><button id="playMain">▶ PLAY</button></div>
   </section>
 
   <section id="gift" class="screen">
@@ -113,12 +114,12 @@
     <h1 class="page-script">A Little Gift</h1>
     <p class="subline">something special is waiting for you</p>
     <button class="big-gift" id="openGift"><span class="gift-illustration">✧</span><span>OPEN YOUR GIFT</span></button>
-    <div class="gift-note" id="giftNote"><div class="gift-note-inner"><h2>For You</h2><p>Wishing you endless happiness, beautiful adventures, and all the little things that make your heart smile.</p><span>with love</span></div></div>
+    <div class="gift-note" id="giftNote"><div class="gift-note-inner"><h2>For Princess</h2><p>Jangan berubah ya, Princess. Tetap jadi dirimu yang unik, menyebalkan, lucu, dan selalu punya cara sendiri untuk membuat hari-hari seseorang terasa lebih menyenangkan. Dunia ini butuh orang seunik kamu.</p><span>— Bocil</span></div></div>
   </section>
 
   <audio id="song" preload="none" loop></audio>
 </main>
-<script src="script.js?v=1007"></script>
+<script src="script.js?v=1008"></script>
 
 
 </body>
