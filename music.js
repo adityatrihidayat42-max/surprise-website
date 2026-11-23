@@ -64,16 +64,17 @@
     style.textContent = `
       #sweetMusicToggle {
         position: fixed;
-        right: 18px;
-        bottom: 20px;
+        right: 14px;
+        top: calc(env(safe-area-inset-top, 0px) + 12px);
         z-index: 99999;
-        border: 1px solid rgba(255,255,255,.45);
-        border-radius: 30px;
-        padding: 12px 17px;
-        background: linear-gradient(135deg,#ed79b5,#a66bd4);
+        border: 1px solid rgba(245,211,231,.35);
+        border-radius: 2px;
+        padding: 9px 13px;
+        background: rgba(35,12,37,.82);
         color: white;
-        font: 600 13px system-ui,sans-serif;
-        box-shadow: 0 5px 22px rgba(130,55,120,.28);
+        font: 500 9px Montserrat,system-ui,sans-serif;
+        letter-spacing: 2px;
+        box-shadow: 0 5px 18px rgba(0,0,0,.22);backdrop-filter:blur(10px);
         cursor: pointer;
       }
     `;
@@ -82,7 +83,7 @@
     const button = document.createElement("button");
     button.id = "sweetMusicToggle";
     button.type = "button";
-    button.textContent = "♫ Putar musik";
+    button.textContent = "MUSIK OFF";
 
     button.addEventListener("click", async () => {
       if (!audio) {
@@ -101,7 +102,7 @@
         timer = setInterval(() => {
           if (playing) phrase(audio.currentTime + 0.1);
         }, beat * 16 * 1000);
-        button.textContent = "♫ Musik: ON";
+        button.textContent = "MUSIK ON";
       } else {
         playing = false;
         clearInterval(timer);
