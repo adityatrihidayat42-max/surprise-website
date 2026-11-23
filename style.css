@@ -552,3 +552,21 @@
   #playlist .trackbar{margin-bottom:14px}
   #playlist .youtube-player{width:100%;margin:14px auto 28px}
 }
+
+
+/* PLAYLIST: simple album cover + one track row */
+#playlist .album-card{
+  width:min(330px,78vw);
+  margin:8px auto 22px;
+}
+#playlist .trackbar{
+  width:min(540px,100%);
+  margin:0 auto;
+}
+#playlist .lyrics-card,
+#playlist .youtube-player{display:none!important}
+@media(max-width:650px){
+  #playlist.screen{justify-content:center;padding-top:48px;padding-bottom:28px}
+  #playlist .album-card{width:min(300px,78vw);margin:8px auto 22px}
+  #playlist .trackbar{width:100%;padding:12px}
+}
