@@ -3,125 +3,132 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#260026">
+<meta name="theme-color" content="#f8dce8">
 <title>A Little Gift for Princess</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=1016">
+<link rel="stylesheet" href="style.css?v=1017">
 </head>
 <body>
 <div class="intro" id="intro">
   <div class="intro-envelope-wrap">
-    <p class="intro-envelope-kicker">A LITTLE SURPRISE FOR YOU</p>
-    <div class="intro-envelope" id="introEnvelope">
-      <div class="intro-letter"><span>A PERSONAL NOTE</span><b>For You</b><i>SEALED WITH CARE</i></div>
-      <div class="intro-envelope-back"></div>
-      <div class="intro-envelope-front"></div>
-      <div class="intro-envelope-flap"></div>
-      <div class="intro-envelope-seal">WITH LOVE</div>
+    <p class="intro-envelope-kicker">A LITTLE GIFT, JUST FOR YOU</p>
+    <div class="intro-envelope" id="introEnvelope" aria-label="Amplop hadiah">
+      <div class="intro-letter"><span>SEBUAH CATATAN KECIL</span><b>Untukmu</b><i>DIBUAT DENGAN HANGAT</i></div>
+      <div class="intro-envelope-back"></div><div class="intro-envelope-front"></div><div class="intro-envelope-flap"></div>
+      <div class="intro-envelope-seal">UNTUKMU</div>
     </div>
-    <p class="intro-envelope-hint" id="introEnvelopeHint">a little something, just for you</p>
-    <button class="skip" id="skipIntro" type="button">OPEN YOUR SURPRISE</button>
+    <p class="intro-envelope-hint" id="introEnvelopeHint">ada sesuatu yang ingin kuberikan</p>
+    <button class="skip" id="skipIntro" type="button">BUKA HADIAHMU</button>
   </div>
 </div>
 
 <main id="app" class="app hidden">
   <div class="sparkles" aria-hidden="true"></div>
-  <header class="topline"><span>A LITTLE WORLD MADE JUST FOR YOU</span></header>
+  <header class="topline"><span>SEBUAH DUNIA KECIL, KHUSUS UNTUKMU</span></header>
 
   <section id="home" class="screen active">
     <div class="home-title">A Little Gift for You</div>
-    <p class="subline">a tiny world for Princess, made with care</p>
+    <p class="subline">empat kejutan kecil, dibuat dengan sepenuh hati</p>
+    <div class="home-ribbon" aria-hidden="true"><span></span><i></i><span></span></div>
     <div class="choices">
-      <button class="choice" data-go="journey">
-        <span class="icon-art camera-art"><svg viewBox="0 0 120 90"><path d="M14 27h22l8-12h31l8 12h23a7 7 0 0 1 7 7v42a7 7 0 0 1-7 7H14a7 7 0 0 1-7-7V34a7 7 0 0 1 7-7Z" fill="#f4d9df" stroke="#51213d" stroke-width="3"/><circle cx="60" cy="53" r="23" fill="#c17b9c" stroke="#51213d" stroke-width="4"/><circle cx="60" cy="53" r="14" fill="#35213b"/><circle cx="65" cy="47" r="5" fill="#f8dce9"/><rect x="87" y="35" width="12" height="8" rx="2" fill="#b14f83"/></svg></span>
-        <span class="choice-label">Journey</span>
+      <button class="choice" data-go="journey" type="button">
+        <span class="icon-art camera-art"><svg viewBox="0 0 120 90" aria-hidden="true"><path d="M14 27h22l8-12h31l8 12h23a7 7 0 0 1 7 7v42a7 7 0 0 1-7 7H14a7 7 0 0 1-7-7V34a7 7 0 0 1 7-7Z" fill="#f4d9e5" stroke="#9c5c78" stroke-width="3"/><circle cx="60" cy="53" r="23" fill="#d78eae" stroke="#9c5c78" stroke-width="4"/><circle cx="60" cy="53" r="14" fill="#fff2f7"/><circle cx="65" cy="47" r="5" fill="#fff"/><rect x="87" y="35" width="12" height="8" rx="2" fill="#bd6d91"/></svg></span>
+        <span class="choice-label">Journey</span><span class="choice-caption">awal cerita kita</span>
       </button>
-      <button class="choice" data-go="moments">
-        <span class="icon-art clock-art"><svg viewBox="0 0 100 100"><circle cx="50" cy="51" r="37" fill="#f4dce8" stroke="#54213e" stroke-width="4"/><circle cx="50" cy="51" r="29" fill="#f8edf1" stroke="#bd789c" stroke-width="2"/><path d="M50 29v23l17 11" fill="none" stroke="#54213e" stroke-width="4" stroke-linecap="round"/><path d="M35 8h30M50 8v7" stroke="#54213e" stroke-width="5" stroke-linecap="round"/><path d="M20 22l-7-7M80 22l7-7" stroke="#54213e" stroke-width="4" stroke-linecap="round"/></svg></span>
-        <span class="choice-label">Moments</span>
+      <button class="choice" data-go="moments" type="button">
+        <span class="icon-art clock-art"><svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="51" r="37" fill="#f4dce8" stroke="#9c5c78" stroke-width="4"/><circle cx="50" cy="51" r="29" fill="#fff8fb" stroke="#d18eaa" stroke-width="2"/><path d="M50 29v23l17 11" fill="none" stroke="#9c5c78" stroke-width="4" stroke-linecap="round"/><path d="M35 8h30M50 8v7" stroke="#9c5c78" stroke-width="5" stroke-linecap="round"/></svg></span>
+        <span class="choice-label">Moments</span><span class="choice-caption">hal-hal kecil</span>
       </button>
-      <button class="choice" data-go="playlist">
-        <span class="icon-art vinyl-art"><svg viewBox="0 0 110 100"><circle cx="55" cy="50" r="42" fill="#211728" stroke="#d9a3c2" stroke-width="3"/><circle cx="55" cy="50" r="33" fill="none" stroke="#75516e" stroke-width="2"/><circle cx="55" cy="50" r="24" fill="none" stroke="#75516e" stroke-width="2"/><circle cx="55" cy="50" r="14" fill="#d78db5"/><circle cx="55" cy="50" r="4" fill="#381d37"/><path d="M83 14l8-8 8 8-8 8Z" fill="#f4d8e7"/></svg></span>
-        <span class="choice-label">Playlist</span>
+      <button class="choice" data-go="playlist" type="button">
+        <span class="icon-art vinyl-art"><svg viewBox="0 0 110 100" aria-hidden="true"><circle cx="55" cy="50" r="42" fill="#392a39" stroke="#d9a3c2" stroke-width="3"/><circle cx="55" cy="50" r="33" fill="none" stroke="#9e718e" stroke-width="2"/><circle cx="55" cy="50" r="24" fill="none" stroke="#9e718e" stroke-width="2"/><circle cx="55" cy="50" r="14" fill="#e7a9c7"/><circle cx="55" cy="50" r="4" fill="#6c405a"/></svg></span>
+        <span class="choice-label">Playlist</span><span class="choice-caption">sebuah lagu untukmu</span>
       </button>
-      <button class="choice" data-go="gift">
-        <span class="icon-art gift-art"><svg viewBox="0 0 110 100"><path d="M17 43h76v48H17z" fill="#c85b91" stroke="#54213e" stroke-width="3"/><path d="M12 31h86v17H12z" fill="#f4d5e3" stroke="#54213e" stroke-width="3"/><path d="M50 31C18 29 24 3 43 12c9 4 10 19 12 19Zm10 0c32-2 26-28 7-19-9 4-10 19-12 19Z" fill="#eaa8c8" stroke="#54213e" stroke-width="3"/><path d="M53 31v60" stroke="#f6d9e8" stroke-width="7"/></svg></span>
-        <span class="choice-label">Gift</span>
+      <button class="choice" data-go="gift" type="button">
+        <span class="icon-art gift-art"><svg viewBox="0 0 110 100" aria-hidden="true"><path d="M17 43h76v48H17z" fill="#d58eae" stroke="#9c5c78" stroke-width="3"/><path d="M12 31h86v17H12z" fill="#f8dce8" stroke="#9c5c78" stroke-width="3"/><path d="M50 31C18 29 24 3 43 12c9 4 10 19 12 19Zm10 0c32-2 26-28 7-19-9 4-10 19-12 19Z" fill="#efb9d0" stroke="#9c5c78" stroke-width="3"/><path d="M53 31v60" stroke="#fff0f6" stroke-width="7"/></svg></span>
+        <span class="choice-label">Gift</span><span class="choice-caption">catatan kecil dariku</span>
       </button>
     </div>
-    <div class="home-footer">made with care, from Bocil to Princess</div>
+    <div class="home-footer">dibuat dengan hangat, dari Bocil untukmu</div>
   </section>
 
   <section id="journey" class="screen">
-    <button class="back">BACK</button>
-    <h1 class="page-script">How It Began</h1>
-    <div class="journey-scene">
-      
-      <article class="letter">
-        <div class="letter-tape"></div>
-        <div class="letter-heading">Dear Princess,</div>
-        <p>Lucu ya, awalnya kita bahkan nggak saling kenal. Semuanya dimulai dari satu permintaan video di Instagram.</p>
-        <p>Lalu obrolan kita ternyata langsung nyambung. Dari yang awalnya orang asing, sekarang ada panggilan Princess dan Bocil, candaan random, dan cerita-cerita kecil yang jadi bagian dari hari.</p>
-        <p>Mungkin buatmu ini hal biasa. Tapi kehadiranmu sering bikin hari yang sederhana terasa lebih menyenangkan.</p>
-        <div class="letter-sign">— Bocil</div>
+    <button class="back" type="button">KEMBALI</button>
+    <h1 class="page-script">Berawal dari Kembang Api</h1>
+    <p class="subline">siapa sangka, hal sederhana bisa menjadi awal cerita</p>
+    <div class="journey-book">
+      <article class="story-card story-opening">
+        <span class="story-number">BAB 01 · AWAL YANG TAK DISANGKA</span>
+        <div class="firework-art" aria-hidden="true"><i></i><b></b><span></span><em></em></div>
+        <h2>Satu video di malam puncak</h2>
+        <p>Awalnya kita bahkan nggak saling kenal. Lalu ada permintaan video kembang api di malam puncak. Sesederhana itu awalnya—cuma sebuah video, tanpa tahu kalau setelahnya akan ada obrolan yang terus berlanjut.</p>
+        <small>kadang, cerita baik dimulai dari hal kecil</small>
       </article>
-      <figure class="polaroid hero-photo"><div class="memory-art art-bouquet"><span></span><i></i><b></b></div><figcaption>from strangers to stories</figcaption></figure>
-      <figure class="polaroid small-photo"><div class="memory-art art-ribbon"><span></span><i></i></div><figcaption>Princess &amp; Bocil</figcaption></figure>
+      <article class="story-card story-middle">
+        <span class="story-number">BAB 02 · OBROLAN YANG MENGALIR</span>
+        <div class="chat-art" aria-hidden="true"><span></span><i></i><b></b></div>
+        <h2>Dari asing jadi nyambung</h2>
+        <p>Setelah video itu, obrolan langsung dimulai. Anehnya, rasanya gampang saja mencari bahan cerita. Topik bisa ke mana-mana, candaan muncul begitu saja, dan dua orang yang tadinya asing mulai terbiasa saling menyapa.</p>
+        <small>ternyata ngobrol bisa sesederhana itu</small>
+      </article>
+      <article class="story-card story-ending">
+        <span class="story-number">BAB 03 · SEKARANG</span>
+        <div class="ribbon-art" aria-hidden="true"><span></span><i></i></div>
+        <h2>Teman dengan cerita sendiri</h2>
+        <p>Sekarang ada banyak cerita kecil, saling jahil, dan panggilan yang entah bagaimana jadi kebiasaan. Mungkin kita cuma dua teman yang sering bercanda. Tapi aku senang karena perkenalan sederhana itu akhirnya membawaku mengenal seseorang seunik kamu.</p>
+        <small>dan semoga masih ada banyak cerita berikutnya</small>
+      </article>
     </div>
-    <div class="mini-audio"><span class="audio-dot"></span><span>OUR LITTLE SOUNDTRACK</span><button id="playMini">▶</button></div>
+    <div class="journey-signoff">terima kasih sudah menjadi bagian dari cerita kecil ini</div>
   </section>
 
   <section id="moments" class="screen">
-    <button class="back">BACK</button>
-    <h1 class="page-script">Our Moments</h1>
-    <p class="subline">little things, kept with a lot of fondness</p>
+    <button class="back" type="button">KEMBALI</button>
+    <h1 class="page-script">Little Things</h1>
+    <p class="subline">hal-hal sederhana yang pantas disimpan baik-baik</p>
+    <div class="memory-intro">Tidak semua kenangan harus berupa foto. Kadang, obrolan singkat dan candaan kecil juga layak punya tempat sendiri.</div>
     <div class="memory-wall">
-      <figure class="polaroid p1"><div class="memory-art art-bow"><span></span></div><figcaption>a little surprise</figcaption></figure>
-      <figure class="polaroid p2"><div class="memory-art art-flower"><span></span><i></i><b></b></div><figcaption>soft little things</figcaption></figure>
-      <figure class="polaroid p3"><div class="memory-art art-chat"><span>Princess</span><i>and Bocil</i><b></b></div><figcaption>our silly names</figcaption></figure>
-      <figure class="polaroid p4"><div class="memory-art art-heart"><span></span></div><figcaption>you make days brighter</figcaption></figure>
-      <figure class="polaroid p5"><div class="memory-art art-bouquet"><span></span><i></i><b></b></div><figcaption>just because</figcaption></figure>
+      <article class="memory-card memory-one"><div class="memory-illustration fireworks-ill"><i></i><b></b><span></span></div><span class="memory-label">awal yang tak terduga</span><p>Sebuah video, lalu cerita yang berlanjut.</p></article>
+      <article class="memory-card memory-two"><div class="memory-illustration chat-ill"><i></i><b></b><span></span></div><span class="memory-label">obrolan random</span><p>Topik sederhana yang entah bagaimana jadi panjang.</p></article>
+      <article class="memory-card memory-three"><div class="memory-illustration flower-ill"><i></i><b></b><span></span></div><span class="memory-label">candaan kecil</span><p>Saling jahil, saling ledek, lalu tertawa lagi.</p></article>
+      <article class="memory-card memory-four"><div class="memory-illustration star-ill"><i></i><b></b><span></span></div><span class="memory-label">hari biasa</span><p>Jadi sedikit lebih menyenangkan karena ada cerita darimu.</p></article>
     </div>
+    <div class="moments-footer">beberapa hal kecil ternyata punya tempat yang besar</div>
   </section>
 
   <section id="playlist" class="screen">
-    <button class="back">BACK</button>
-    <h1 class="page-script">Our Playlist</h1>
-    <p class="subline">one little song, a thousand little feelings</p>
+    <button class="back" type="button">KEMBALI</button>
+    <h1 class="page-script">A Song for You</h1>
+    <p class="subline">ada lagu yang rasanya pas untuk hadiah kecil ini</p>
     <div class="retro-room">
       <div class="tv">
         <div class="tv-top">NOW PLAYING</div>
         <div class="tv-screen">
-          <img class="playlist-tv-cover" src="playlist-cover.jpg" alt="MAMA’S BOY album cover">
-          <div class="tv-visual" aria-hidden="true"><span class="visual-orbit orbit-one"></span><span class="visual-orbit orbit-two"></span><span class="visual-heart"></span><span class="visual-flower flower-one"></span><span class="visual-flower flower-two"></span><span class="visual-spark spark-one"></span><span class="visual-spark spark-two"></span><span class="visual-caption">a song for you</span></div>
+          <img class="playlist-tv-cover" src="playlist-cover.jpg" alt="Sampul album LANY">
+          <div class="tv-visual" aria-hidden="true"><span class="visual-orbit orbit-one"></span><span class="visual-orbit orbit-two"></span><span class="visual-heart"></span><span class="visual-flower flower-one"></span><span class="visual-flower flower-two"></span><span class="visual-spark spark-one"></span><span class="visual-spark spark-two"></span><span class="visual-caption">sebuah lagu untukmu</span></div>
         </div>
         <div class="tv-controls"><span></span><span></span><span></span></div>
       </div>
-      <div class="radio">
-        <div class="radio-brand">LOVE FM</div>
-        <div class="radio-window">98.8 FM</div>
-        <div class="radio-knobs"><i></i><i></i><i></i></div>
-      </div>
+      <div class="radio"><div class="radio-brand">LOVE FM</div><div class="radio-window">98.8 FM</div><div class="radio-knobs"><i></i><i></i><i></i></div></div>
       <div class="record"><div class="record-label"></div></div>
       <div class="cassette"><span>LOVE MIX</span><i></i><i></i></div>
     </div>
-    <div class="trackbar"><div><b>01.</b> you! — LANY <small>for my favourite Princess</small></div><button id="playMain">▶ PLAY</button></div>
+    <div class="trackbar"><div><b>01.</b> you! — LANY <small>untuk seseorang yang istimewa</small></div><button id="playMain" type="button">▶ PUTAR</button></div>
+    <p class="playlist-note">Tekan putar, lalu biarkan lagu ini menemani sebentar.</p>
   </section>
 
   <section id="gift" class="screen">
-    <button class="back">BACK</button>
-    <h1 class="page-script">A Little Gift</h1>
-    <p class="subline">something special is waiting for you</p>
-    <button class="big-gift" id="openGift"><span class="gift-illustration">✧</span><span>OPEN YOUR GIFT</span></button>
-    <div class="gift-note" id="giftNote"><div class="gift-note-inner"><h2>For Princess</h2><p>Jangan berubah ya, Princess. Tetap jadi dirimu yang unik, menyebalkan, lucu, dan selalu punya cara sendiri untuk membuat hari-hari seseorang terasa lebih menyenangkan. Dunia ini butuh orang seunik kamu.</p><span>— Bocil</span></div></div>
+    <button class="back" type="button">KEMBALI</button>
+    <h1 class="page-script">A Little Note</h1>
+    <p class="subline">ada satu hal kecil yang ingin kusampaikan</p>
+    <div class="gift-envelope" aria-hidden="true"><div class="gift-paper"><span>UNTUKMU</span><b>sedikit pesan</b></div><i></i></div>
+    <button class="big-gift" id="openGift" type="button" aria-expanded="false"><span class="gift-illustration" aria-hidden="true"></span><span>BUKA CATATAN KECIL</span></button>
+    <div class="gift-note" id="giftNote" aria-hidden="true"><div class="gift-note-inner"><span class="note-kicker">SEBUAH CATATAN KECIL</span><h2>Untukmu</h2><p>Mungkin kamu nggak selalu sadar, tapi kehadiranmu bisa membuat hari yang biasa saja terasa lebih menyenangkan. Terima kasih sudah mau berbagi cerita, menanggapi candaan, dan jadi teman yang menyenangkan untuk dikenal.</p><p>Jangan berubah ya, Princess. Dunia ini butuh orang seunik kamu. Tetap jadi dirimu sendiri, dengan segala cerita dan keajaiban kecilmu.</p><span class="note-sign">— Bocil</span></div></div>
+    <div class="gift-footer">sampai jumpa di cerita kecil berikutnya</div>
   </section>
-
   <audio id="song" preload="none" loop></audio>
 </main>
-<script src="script.js?v=1008"></script>
-
-
+<script src="script.js?v=1009"></script>
 </body>
 </html>
