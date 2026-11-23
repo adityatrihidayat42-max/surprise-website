@@ -57,6 +57,7 @@ document.getElementById("playMain")?.addEventListener("click", () => {
   const currentPlayer = screen.querySelector("iframe.tv-youtube");
   if (currentPlayer) {
     currentPlayer.remove();
+    screen.classList.remove("is-playing");
     button.textContent = "▶ PLAY";
     return;
   }
@@ -68,6 +69,7 @@ document.getElementById("playMain")?.addEventListener("click", () => {
   player.allow = "autoplay; encrypted-media; picture-in-picture";
   player.allowFullscreen = true;
   screen.appendChild(player);
+  requestAnimationFrame(() => screen.classList.add("is-playing"));
   button.textContent = "■ STOP";
 });
 
