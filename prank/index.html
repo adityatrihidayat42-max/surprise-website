@@ -1,96 +1,42 @@
 <!doctype html>
-<html lang="id">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#f8e5ed">
-<title>A Little Gift, Just for You</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<html lang="id"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f8e5ed"><title>A Little Gift, Just for You</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
 <style>
-:root{--rose:#c76e9c;--rose-dark:#a64b7c;--rose-light:#f5d7e5;--ink:#89566f}
-*{box-sizing:border-box}
-html,body{margin:0;min-height:100%;width:100%}
-body{font-family:"DM Sans",sans-serif;color:var(--ink);background:#f8e5ed;overflow-x:hidden}
-button{font:inherit}
-.page{min-height:100svh;display:flex;align-items:center;justify-content:center;padding:clamp(30px,7vh,70px) 22px max(42px,env(safe-area-inset-bottom));position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 35%,#fffafd 0,#fceef4 44%,#f2d0e0 100%)}
-.page:before,.page:after{content:"";position:absolute;border-radius:50%;pointer-events:none;filter:blur(1px)}
-.page:before{width:300px;height:300px;left:-180px;top:8%;background:#fff9}
-.page:after{width:380px;height:380px;right:-220px;bottom:-10%;background:#e8b2cc55}
-.grain{position:absolute;inset:0;pointer-events:none;opacity:.26;background-image:radial-gradient(#fff 1px,transparent 1.7px);background-size:29px 29px;mask-image:linear-gradient(transparent,#000 18%,#000 88%,transparent)}
+:root{--ink:#89566f}*{box-sizing:border-box}html,body{margin:0;min-height:100%;width:100%}body{font-family:"DM Sans",sans-serif;color:var(--ink);background:#f8e5ed;overflow-x:hidden}button{font:inherit}
+.page{min-height:100svh;display:flex;align-items:center;justify-content:center;padding:clamp(28px,6vh,62px) 22px max(40px,env(safe-area-inset-bottom));position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 35%,#fffafd 0,#fceef4 44%,#f2d0e0 100%)}
+.page:before,.page:after{content:"";position:absolute;border-radius:50%;pointer-events:none;filter:blur(1px)}.page:before{width:300px;height:300px;left:-180px;top:8%;background:#fff9}.page:after{width:380px;height:380px;right:-220px;bottom:-10%;background:#e8b2cc55}
+.grain{position:absolute;inset:0;pointer-events:none;opacity:.2;background-image:radial-gradient(#fff 1px,transparent 1.7px);background-size:29px 29px}
 .wrap{width:min(540px,100%);text-align:center;position:relative;z-index:1}
-.kicker{margin:0 0 clamp(42px,8vh,76px);font-size:clamp(10px,2.7vw,12px);font-weight:700;letter-spacing:.38em;line-height:1.8;color:#9d6a83}
+.kicker{margin:0 auto clamp(42px,8vh,76px);font-size:clamp(9px,2.15vw,11px);font-weight:700;letter-spacing:.32em;line-height:1.5;color:#9d6a83;white-space:nowrap}
 .envelope{width:min(500px,88vw);height:clamp(245px,64vw,340px);margin:auto;position:relative;perspective:1100px;filter:drop-shadow(0 22px 25px #98466b2c)}
 .env-back{position:absolute;inset:0;border-radius:5px 5px 15px 15px;background:linear-gradient(145deg,#df98b9,#b85b90);box-shadow:inset 0 0 0 1px #ffffff55}
-.letter{position:absolute;z-index:2;left:8%;right:8%;top:7%;height:82%;border-radius:8px;background:linear-gradient(150deg,#fff,#fff5fa);box-shadow:0 5px 18px #87375d20;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;transform:translateY(8%);transition:transform .9s cubic-bezier(.2,.75,.2,1)}
-.letter small{font-size:9px;font-weight:700;letter-spacing:.25em;color:#c18aa4}
-.letter strong{font:italic 34px "Playfair Display",serif;color:#a64b7c}
-.letter span{font-size:9px;letter-spacing:.16em;color:#bd83a0}
+.letter{position:absolute;z-index:2;left:8%;right:8%;top:7%;height:82%;border-radius:8px;background:linear-gradient(150deg,#fff,#fff5fa);box-shadow:0 5px 18px #87375d20;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;opacity:0;visibility:hidden;transform:translateY(58%) scale(.96);transition:transform .85s cubic-bezier(.2,.75,.2,1),opacity .35s,visibility 0s linear .85s}
+.letter small{font-size:9px;font-weight:700;letter-spacing:.25em;color:#c18aa4}.letter strong{font:italic 34px "Playfair Display",serif;color:#a64b7c}.letter span{font-size:9px;letter-spacing:.16em;color:#bd83a0}
 .env-pocket{position:absolute;z-index:4;inset:0;border-radius:5px 5px 15px 15px;background:linear-gradient(145deg,#d98ab0,#b75a90);clip-path:polygon(0 0,50% 57%,100% 0,100% 100%,0 100%)}
 .env-pocket:after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,#ffffff12,transparent 45%,#762d5810)}
-.env-flap{position:absolute;z-index:5;left:0;right:0;top:0;height:66%;background:linear-gradient(150deg,#fffafd 0%,#f9edf3 100%);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top center;transition:transform .85s cubic-bezier(.2,.75,.2,1);filter:drop-shadow(0 7px 5px #82365d20);backface-visibility:visible}
-.seal{position:absolute;z-index:7;left:50%;top:57%;transform:translate(-50%,-50%);width:clamp(104px,22vw,128px);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:11px;font-weight:700;letter-spacing:.2em;background:radial-gradient(circle at 34% 25%,#f8dce9 0,#df9cbe 38%,#bd6597 72%,#a64b7c 100%);border:2px solid #fff9;outline:1px solid #fff9;outline-offset:5px;box-shadow:0 9px 24px #7430524a;transition:opacity .3s,transform .45s}
-.envelope.open .env-flap{transform:rotateX(180deg);z-index:1}
-.envelope.open .letter{transform:translateY(-38%)}
-.envelope.open .seal{opacity:0;transform:translate(-50%,-50%) scale(.5)}
+.env-flap{position:absolute;z-index:5;left:0;right:0;top:0;height:66%;background:linear-gradient(150deg,#fffafd,#f9edf3);clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top center;transition:transform .85s cubic-bezier(.2,.75,.2,1);filter:drop-shadow(0 7px 5px #82365d20)}
+.seal{position:absolute;z-index:7;left:50%;top:57%;transform:translate(-50%,-50%);width:clamp(104px,22vw,128px);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;color:#fff;font-size:11px;font-weight:700;letter-spacing:.2em;background:radial-gradient(circle at 34% 25%,#f8dce9,#df9cbe 38%,#bd6597 72%,#a64b7c);border:2px solid #fff9;outline:1px solid #fff9;outline-offset:5px;box-shadow:0 9px 24px #7430524a;transition:opacity .3s,transform .45s}
+.envelope.open .env-flap{transform:rotateX(180deg);z-index:1}.envelope.open .letter{opacity:1;visibility:visible;transform:translateY(-39%) scale(1);transition-delay:0s}.envelope.open .seal{opacity:0;transform:translate(-50%,-50%) scale(.5)}
 .hint{font:italic clamp(21px,5.2vw,29px) "Playfair Display",serif;color:#a36b84;margin:clamp(44px,7vh,62px) 0 clamp(30px,5vh,43px)}
-.primary{width:min(440px,100%);min-height:70px;padding:16px 22px;border:1px solid #fff9;outline:1px solid #e4b0c8;outline-offset:-7px;background:linear-gradient(110deg,#d38bad,#b75b90);box-shadow:0 12px 24px #a64e792d;color:#fff;font-size:12px;font-weight:800;letter-spacing:.34em;cursor:pointer;transition:transform .2s,filter .2s}
-.primary:active{transform:translateY(2px)}
-.primary:disabled{opacity:.75;cursor:wait}
-button:focus-visible{outline:3px solid #7e3158;outline-offset:4px}
-.reveal{display:none;position:fixed;inset:0;z-index:10;place-items:center;padding:20px;background:radial-gradient(ellipse at 50% 20%,#efb2d0 0,#b65388 48%,#55213f 100%);opacity:0;overflow:auto}
-.reveal.show{display:grid;animation:fade .35s ease forwards}
-@keyframes fade{to{opacity:1}}
-.reveal:before{content:"";position:absolute;inset:0;opacity:.18;background-image:radial-gradient(#fff 1px,transparent 1.5px);background-size:27px 27px}
-.card{position:relative;width:min(430px,100%);padding:28px 23px 25px;text-align:center;border-radius:26px;background:linear-gradient(155deg,#fffafd,#ffeaf3);border:1px solid #ffffffc9;box-shadow:0 28px 80px #39132e66;transform:translateY(24px) scale(.92);animation:pop .55s .08s cubic-bezier(.2,1.25,.4,1) forwards}
-@keyframes pop{to{transform:translateY(0) scale(1)}}
-.topline{display:inline-block;padding:8px 13px;border-radius:99px;background:#f8dce9;color:#a64d7b;font-size:9px;font-weight:800;letter-spacing:.23em}
-.hand{font-family:system-ui,sans-serif;font-size:clamp(112px,34vw,158px);line-height:1.35;margin:8px auto 2px;filter:drop-shadow(0 12px 8px #a64d7930);animation:wiggle 1.2s .6s ease-in-out both}
-@keyframes wiggle{0%,100%{transform:rotate(0)}25%{transform:rotate(-12deg) scale(1.06)}55%{transform:rotate(10deg) scale(1.08)}}
-.card h1{font:600 clamp(31px,8vw,43px)/1.08 "Playfair Display",serif;color:#9d3f70;margin:2px 0 12px}
-.card h1 span{display:block;font-style:italic}
-.card p{font-size:13px;line-height:1.75;color:#876477;margin:0 auto 20px;max-width:310px}
-.again{border:0;border-radius:12px;padding:15px 22px;width:100%;background:linear-gradient(110deg,#d77eaa,#a94378);color:white;font-size:11px;font-weight:800;letter-spacing:.19em;box-shadow:0 9px 18px #a64e7930;cursor:pointer}
-.tiny{font-size:9px;color:#b78a9f;margin:14px 0 0;letter-spacing:.08em}
-.confetti{position:absolute;inset:0;overflow:hidden;pointer-events:none}
-.confetti i{position:absolute;top:-18px;width:7px;height:13px;border-radius:3px;background:#fff;animation:fall 2.8s linear infinite}
-.confetti i:nth-child(3n){background:#ffb5d5}.confetti i:nth-child(3n+1){background:#ffd86e}
-@keyframes fall{to{transform:translateY(110vh) rotate(650deg)}}
+.primary{width:min(440px,100%);min-height:70px;padding:16px 22px;border:1px solid #fff9;outline:1px solid #e4b0c8;outline-offset:-7px;background:linear-gradient(110deg,#d38bad,#b75b90);box-shadow:0 12px 24px #a64e792d;color:#fff;font-size:12px;font-weight:800;letter-spacing:.34em;cursor:pointer;transition:transform .2s}.primary:active{transform:translateY(2px)}.primary:disabled{opacity:.75;cursor:wait}button:focus-visible{outline:3px solid #7e3158;outline-offset:4px}
+.reveal{display:none;position:fixed;inset:0;z-index:10;place-items:center;padding:20px;background:radial-gradient(ellipse at 50% 20%,#efb2d0 0,#b65388 48%,#55213f 100%);opacity:0;overflow:auto}.reveal.show{display:grid;animation:fade .35s ease forwards}@keyframes fade{to{opacity:1}}.reveal:before{content:"";position:absolute;inset:0;opacity:.18;background-image:radial-gradient(#fff 1px,transparent 1.5px);background-size:27px 27px}
+.card{position:relative;width:min(430px,100%);padding:28px 23px 25px;text-align:center;border-radius:26px;background:linear-gradient(155deg,#fffafd,#ffeaf3);border:1px solid #ffffffc9;box-shadow:0 28px 80px #39132e66;transform:translateY(24px) scale(.92);animation:pop .55s .08s cubic-bezier(.2,1.25,.4,1) forwards}@keyframes pop{to{transform:translateY(0) scale(1)}}
+.topline{display:inline-block;padding:8px 13px;border-radius:99px;background:#f8dce9;color:#a64d7b;font-size:9px;font-weight:800;letter-spacing:.23em}.hand{font-family:system-ui,sans-serif;font-size:clamp(112px,34vw,158px);line-height:1.35;margin:8px auto 2px;filter:drop-shadow(0 12px 8px #a64d7930);animation:wiggle 1.2s .6s ease-in-out both}@keyframes wiggle{0%,100%{transform:rotate(0)}25%{transform:rotate(-12deg) scale(1.06)}55%{transform:rotate(10deg) scale(1.08)}}
+.card h1{font:600 clamp(31px,8vw,43px)/1.08 "Playfair Display",serif;color:#9d3f70;margin:2px 0 12px}.card h1 span{display:block;font-style:italic}.card p{font-size:13px;line-height:1.75;color:#876477;margin:0 auto 20px;max-width:310px}
+.again{border:0;border-radius:12px;padding:15px 22px;width:100%;background:linear-gradient(110deg,#d77eaa,#a94378);color:white;font-size:11px;font-weight:800;letter-spacing:.19em;box-shadow:0 9px 18px #a64e7930;cursor:pointer}.tiny{font-size:9px;color:#b78a9f;margin:14px 0 0;letter-spacing:.08em}
+.confetti{position:absolute;inset:0;overflow:hidden;pointer-events:none}.confetti i{position:absolute;top:-18px;width:7px;height:13px;border-radius:3px;background:#fff;animation:fall 2.8s linear infinite}.confetti i:nth-child(3n){background:#ffb5d5}.confetti i:nth-child(3n+1){background:#ffd86e}@keyframes fall{to{transform:translateY(110vh) rotate(650deg)}}
 @media(max-height:720px){.page{padding-top:25px}.kicker{margin-bottom:32px}.envelope{height:clamp(220px,48vh,290px)}.hint{margin:30px 0 24px}.primary{min-height:60px}}
-@media(max-width:390px){.kicker{letter-spacing:.3em}.envelope{width:90vw;height:250px}.hint{font-size:22px}.primary{font-size:11px}}
+@media(max-width:390px){.kicker{letter-spacing:.25em;font-size:9px}.envelope{width:90vw;height:250px}.hint{font-size:22px}.primary{font-size:11px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
-</style>
-</head>
-<body>
-<main class="page">
-<div class="grain" aria-hidden="true"></div>
-<section class="wrap" aria-label="Hadiah rahasia">
-<p class="kicker">A LITTLE GIFT, JUST FOR YOU</p>
-<div class="envelope" id="envelope">
-<div class="env-back"></div>
-<div class="letter"><small>SEBUAH KEJUTAN KECIL</small><strong>Untukmu</strong><span>DIBUKA DENGAN SENYUM</span></div>
-<div class="env-pocket"></div>
-<div class="env-flap"></div>
-<div class="seal">UNTUKMU</div>
-</div>
-<p class="hint" id="hint">ada sesuatu yang ingin kuberikan</p>
-<button class="primary" id="open" type="button">BUKA HADIAHMU</button>
-</section>
-</main>
-<section class="reveal" id="reveal" role="dialog" aria-modal="true" aria-labelledby="revealTitle">
-<div class="confetti" aria-hidden="true"><i style="left:5%;animation-delay:.1s"></i><i style="left:15%;animation-delay:.8s"></i><i style="left:25%;animation-delay:.4s"></i><i style="left:36%;animation-delay:1.2s"></i><i style="left:48%;animation-delay:.2s"></i><i style="left:59%;animation-delay:1s"></i><i style="left:70%;animation-delay:.5s"></i><i style="left:82%;animation-delay:1.4s"></i><i style="left:94%;animation-delay:.3s"></i></div>
-<div class="card"><div class="topline">PLOT TWIST • KAMU TERTIPU 🤭</div><div class="hand" role="img" aria-label="Jari tengah">🖕</div>
-<h1 id="revealTitle">HAHAHA <span>KENA PRANK!</span></h1>
-<p>Kirain dapat hadiah spesial, ya? EHH malah dapat salam satu jari. Jangan marah, bercanda doang! 😭💗</p>
-<button class="again" id="again" type="button">↻ &nbsp; ULANGI PRANK-NYA</button><div class="tiny">JANGAN DIANGGAP SERIUS, INI CUMA BERCANDA ♡</div></div>
-</section>
+</style></head><body>
+<main class="page"><div class="grain" aria-hidden="true"></div><section class="wrap" aria-label="Hadiah rahasia">
+<p class="kicker">A LITTLE GIFT, JUST FOR YOU</p><div class="envelope" id="envelope"><div class="env-back"></div><div class="letter"><small>SEBUAH KEJUTAN KECIL</small><strong>Untukmu</strong><span>DIBUKA DENGAN SENYUM</span></div><div class="env-pocket"></div><div class="env-flap"></div><div class="seal">UNTUKMU</div></div>
+<p class="hint" id="hint">ada sesuatu yang ingin kuberikan</p><button class="primary" id="open" type="button">BUKA HADIAHMU</button></section></main>
+<section class="reveal" id="reveal" role="dialog" aria-modal="true" aria-labelledby="revealTitle"><div class="confetti" aria-hidden="true"><i style="left:5%;animation-delay:.1s"></i><i style="left:15%;animation-delay:.8s"></i><i style="left:25%;animation-delay:.4s"></i><i style="left:36%;animation-delay:1.2s"></i><i style="left:48%;animation-delay:.2s"></i><i style="left:59%;animation-delay:1s"></i><i style="left:70%;animation-delay:.5s"></i><i style="left:82%;animation-delay:1.4s"></i><i style="left:94%;animation-delay:.3s"></i></div><div class="card"><div class="topline">PLOT TWIST • KAMU TERTIPU 🤭</div><div class="hand" role="img" aria-label="Jari tengah">🖕</div><h1 id="revealTitle">HAHAHA <span>KENA PRANK!</span></h1><p>Kirain dapat hadiah spesial, ya? EHH malah dapat salam satu jari. Jangan marah, bercanda doang! 😭💗</p><button class="again" id="again" type="button">↻ &nbsp; ULANGI PRANK-NYA</button><div class="tiny">JANGAN DIANGGAP SERIUS, INI CUMA BERCANDA ♡</div></div></section>
 <script>
 const envelope=document.getElementById('envelope'),openButton=document.getElementById('open'),reveal=document.getElementById('reveal'),hint=document.getElementById('hint');let opened=false,timer;
 openButton.addEventListener('click',()=>{if(opened)return;opened=true;envelope.classList.add('open');hint.textContent='sebentar... ada kejutan untukmu';openButton.textContent='MENYIAPKAN KEJUTAN...';openButton.disabled=true;timer=window.setTimeout(()=>reveal.classList.add('show'),900)});
 function resetPrank(){clearTimeout(timer);reveal.classList.remove('show');envelope.classList.remove('open');hint.textContent='ada sesuatu yang ingin kuberikan';openButton.textContent='BUKA HADIAHMU';openButton.disabled=false;opened=false}
-document.getElementById('again').addEventListener('click',resetPrank);
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&reveal.classList.contains('show'))resetPrank()});
-</script>
-</body>
-</html>
+document.getElementById('again').addEventListener('click',resetPrank);document.addEventListener('keydown',e=>{if(e.key==='Escape'&&reveal.classList.contains('show'))resetPrank()});
+</script></body></html>
